@@ -22,3 +22,7 @@ Günlüğü tutmamı sağlayan araçların listesi:
 
 Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar. Bu
 sebepten ötürü burada bu araçların nasıl kullanılacaklarını burada belirtmeyeceğim.
+
+Eksikler;
+
+- Yorum yazma alani eklenecek. (Disqus)
