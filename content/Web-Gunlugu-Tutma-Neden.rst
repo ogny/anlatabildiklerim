@@ -1,4 +1,4 @@
-Web Günlüğü Tutma
+Web Günlüğü Tutma Nedenim
 ############################
 
 :date: 2014-07-31
@@ -18,4 +18,3 @@ Neden diğer araçlar değil de web günlüğü?
    ikisinin arasında bir yerde yazmak istediğimde işime yarıyor.
 
 -  Web günlüğümde, karşılaştığım problemleri etraflıca ele alacağım.
-

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anlatabildiklerim</title><link>http://gunluk.orkungunay.com/</link><description></description><atom:link href="http://gunluk.orkungunay.com/feeds/orkung.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 31 Jul 2014 00:00:00 +0300</lastBuildDate><item><title>Web Günlüğü Tutma</title><link>http://gunluk.orkungunay.com/web-gunlugu-tutma.html</link><description>&lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir rüzgar
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anlatabildiklerim</title><link>http://gunluk.orkungunay.com/</link><description></description><atom:link href="http://gunluk.orkungunay.com/feeds/orkung.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 02 Nov 2014 23:15:00 +0200</lastBuildDate><item><title>Nasıl Web Günlüğü Tutuyorum</title><link>http://gunluk.orkungunay.com/nasil-web-gunlugu-tutuyorum.html</link><description>&lt;p&gt;Günlüğü tutmamı sağlayan araçların listesi:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Platform: &lt;strong&gt;Pelican&lt;/strong&gt; Static Site Generator&lt;/li&gt;
+&lt;li&gt;Tema: &lt;strong&gt;Lazystrap&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Biçimlendirme dili: &lt;strong&gt;reStructuredText&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Metin editörü: &lt;strong&gt;Vim&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Versiyonlama: &lt;strong&gt;Github&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Deployment yöntemi: &lt;strong&gt;Rsync&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar. Bu
+sebepten ötürü burada bu araçların nasıl kullanılacaklarını burada belirtmeyeceğim.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">orkung</dc:creator><pubDate>Sun, 02 Nov 2014 23:15:00 +0200</pubDate><guid>tag:gunluk.orkungunay.com,2014-11-02:nasil-web-gunlugu-tutuyorum.html</guid><category>web</category></item><item><title>Web Günlüğü Tutma Nedenim</title><link>http://gunluk.orkungunay.com/web-gunlugu-tutma-nedenim.html</link><description>&lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir rüzgar
 yardım etmez.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Web günlüğü tutmak bir ihtiyaç mıdır?&lt;/p&gt;
 &lt;p&gt;Neden diğer araçlar değil de web günlüğü?&lt;/p&gt;
@@ -9,4 +20,4 @@ oluşturacak olsam bu işi gitbook'la yapardım. Web günlüğü bu
 ikisinin arasında bir yerde yazmak istediğimde işime yarıyor.&lt;/li&gt;
 &lt;li&gt;Web günlüğümde, karşılaştığım problemleri etraflıca ele alacağım.&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">orkung</dc:creator><pubDate>Thu, 31 Jul 2014 00:00:00 +0300</pubDate><guid>tag:gunluk.orkungunay.com,2014-07-31:web-gunlugu-tutma.html</guid><category>web</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">orkung</dc:creator><pubDate>Thu, 31 Jul 2014 00:00:00 +0300</pubDate><guid>tag:gunluk.orkungunay.com,2014-07-31:web-gunlugu-tutma-nedenim.html</guid><category>web</category></item></channel></rss>

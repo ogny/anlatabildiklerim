@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkung.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2014-07-31T00:00:00+03:00</updated><entry><title>Web Günlüğü Tutma</title><link href="http://gunluk.orkungunay.com/web-gunlugu-tutma.html" rel="alternate"></link><updated>2014-07-31T00:00:00+03:00</updated><author><name>orkung</name></author><id>tag:gunluk.orkungunay.com,2014-07-31:web-gunlugu-tutma.html</id><summary type="html">&lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir rüzgar
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkung.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2014-11-02T23:15:00+02:00</updated><entry><title>Nasıl Web Günlüğü Tutuyorum</title><link href="http://gunluk.orkungunay.com/nasil-web-gunlugu-tutuyorum.html" rel="alternate"></link><updated>2014-11-02T23:15:00+02:00</updated><author><name>orkung</name></author><id>tag:gunluk.orkungunay.com,2014-11-02:nasil-web-gunlugu-tutuyorum.html</id><summary type="html">&lt;p&gt;Günlüğü tutmamı sağlayan araçların listesi:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Platform: &lt;strong&gt;Pelican&lt;/strong&gt; Static Site Generator&lt;/li&gt;
+&lt;li&gt;Tema: &lt;strong&gt;Lazystrap&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Biçimlendirme dili: &lt;strong&gt;reStructuredText&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Metin editörü: &lt;strong&gt;Vim&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Versiyonlama: &lt;strong&gt;Github&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Deployment yöntemi: &lt;strong&gt;Rsync&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar. Bu
+sebepten ötürü burada bu araçların nasıl kullanılacaklarını burada belirtmeyeceğim.&lt;/p&gt;
+</summary><category term="web"></category></entry><entry><title>Web Günlüğü Tutma Nedenim</title><link href="http://gunluk.orkungunay.com/web-gunlugu-tutma-nedenim.html" rel="alternate"></link><updated>2014-07-31T00:00:00+03:00</updated><author><name>orkung</name></author><id>tag:gunluk.orkungunay.com,2014-07-31:web-gunlugu-tutma-nedenim.html</id><summary type="html">&lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir rüzgar
 yardım etmez.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Web günlüğü tutmak bir ihtiyaç mıdır?&lt;/p&gt;
 &lt;p&gt;Neden diğer araçlar değil de web günlüğü?&lt;/p&gt;
