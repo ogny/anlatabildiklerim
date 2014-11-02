@@ -6,16 +6,12 @@ Kullanışlı Chrome Eklentileri
 :categories: chrome 
 :tags: extensions
 
-Kullandığım ve kurup deneyip kullanmaktan
-vazgeçtiğim eklentilerin listesini içeriğe göre gruplayıp alfabetik
-olarak aşağıda sıraladım.
+Kullandığım Google Chrome eklentilerini içeriklerine göre gruplayıp alfabetik
+olarak sıraladım.
 
 Verimlilik
 ^^^^^^^^^^
 
--  `1 Click
-   Translator <https://chrome.google.com/webstore/detail/jgpocibfamiaabfcecbphfjepfgcffmg>`__:
-   Çevirmek istediğiniz kelimeyi farenizle taramanız yeterli oluyor.
 -  `AutoPagerize <https://chrome.google.com/webstore/detail/igiofjhpmpihnifddepnpngfjhkfenbp>`__:
    Sitelerde sayfa sonuna geldiğinizde 'daha fazla yükle' özelliğini
    getiriyor.
@@ -81,6 +77,7 @@ Verimlilik
 
 Görsellik
 ~~~~~~~~~
+
 -  `Centered Google Results <https://chrome.google.com/webstore/detail/hefammjpmbkfnadmepaomjgdhddcblme>`__:
    Google arama sonuçlarının görünümünü ortalar.
 -  `chrome-theme-solarized-dark <https://github.com/downloads/AnotherKamila/chrome-theme-solarized-dark/chrome-theme-solarized-dark.crx>`__

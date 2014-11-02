@@ -8,8 +8,9 @@
 &lt;li&gt;Versiyonlama: &lt;strong&gt;Github&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Deployment yöntemi: &lt;strong&gt;Rsync&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar. Bu
-sebepten ötürü burada bu araçların nasıl kullanılacaklarını burada belirtmeyeceğim.&lt;/p&gt;
+&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
+Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu
+sebepten bu araçların nasıl kullanıldıklarına burada girmeyeceğim.&lt;/p&gt;
 &lt;p&gt;Eksikler;&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Yorum yazma alani eklenecek. (Disqus)&lt;/li&gt;

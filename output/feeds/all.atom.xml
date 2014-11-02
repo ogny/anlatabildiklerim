@@ -8,8 +8,9 @@
 &lt;li&gt;Versiyonlama: &lt;strong&gt;Github&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Deployment yöntemi: &lt;strong&gt;Rsync&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar. Bu
-sebepten ötürü burada bu araçların nasıl kullanılacaklarını burada belirtmeyeceğim.&lt;/p&gt;
+&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
+Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu
+sebepten bu araçların nasıl kullanıldıklarına burada girmeyeceğim.&lt;/p&gt;
 &lt;p&gt;Eksikler;&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Yorum yazma alani eklenecek. (Disqus)&lt;/li&gt;
@@ -45,15 +46,11 @@ anything), this tool is for you.&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://taskwarrior.org/projects/show/taskwarrior"&gt;Taskwarrior&lt;/a&gt;:
 Gorev yoneticisi.&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="apps"></category></entry><entry><title>Kullanışlı Chrome Eklentileri</title><link href="http://gunluk.orkungunay.com/kullanisli-chrome-eklentileri.html" rel="alternate"></link><updated>2013-10-12T04:54:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2013-10-12:kullanisli-chrome-eklentileri.html</id><summary type="html">&lt;p&gt;Kullandığım ve kurup deneyip kullanmaktan
-vazgeçtiğim eklentilerin listesini içeriğe göre gruplayıp alfabetik
-olarak aşağıda sıraladım.&lt;/p&gt;
+</summary><category term="apps"></category></entry><entry><title>Kullanışlı Chrome Eklentileri</title><link href="http://gunluk.orkungunay.com/kullanisli-chrome-eklentileri.html" rel="alternate"></link><updated>2013-10-12T04:54:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2013-10-12:kullanisli-chrome-eklentileri.html</id><summary type="html">&lt;p&gt;Kullandığım Google Chrome eklentilerini içeriklerine göre gruplayıp alfabetik
+olarak sıraladım.&lt;/p&gt;
 &lt;div class="section" id="verimlilik"&gt;
 &lt;h2&gt;Verimlilik&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://chrome.google.com/webstore/detail/jgpocibfamiaabfcecbphfjepfgcffmg"&gt;1 Click
-Translator&lt;/a&gt;:
-Çevirmek istediğiniz kelimeyi farenizle taramanız yeterli oluyor.&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://chrome.google.com/webstore/detail/igiofjhpmpihnifddepnpngfjhkfenbp"&gt;AutoPagerize&lt;/a&gt;:
 Sitelerde sayfa sonuna geldiğinizde 'daha fazla yükle' özelliğini
 getiriyor.&lt;/li&gt;

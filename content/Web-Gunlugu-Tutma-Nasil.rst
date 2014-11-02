@@ -20,8 +20,9 @@ Günlüğü tutmamı sağlayan araçların listesi:
 
 -  Deployment yöntemi: **Rsync**
 
-Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar. Bu
-sebepten ötürü burada bu araçların nasıl kullanılacaklarını burada belirtmeyeceğim.
+Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
+Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu
+sebepten bu araçların nasıl kullanıldıklarına burada girmeyeceğim.
 
 Eksikler;
 
