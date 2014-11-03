@@ -13,8 +13,6 @@ uygulamalarını paylaşmak istedim. Liste eksik eklemeler yapacağım.
    `Fatih Arslan <http://arslan.io/>`__ `eski gunlugunde <http://blog.arsln.org>`__
    guzel bir `tanitim yazisi <http://blog.arsln.org/autojump-kendi-kendine-ogrenen-cd-komutu/>`__ yazmisti.
 -  `Cheat: Command-Line Tools Cheatsheets <http://www.syslogs.org/cheat-command-line-tools-cheatsheets>`__
--  Dict:
-   ``aptitude install dict dict-devil dict-freedict-eng-tur \ dict-freedict-tur-eng dict-gcide dict-moby-thesaurus \ dict-vera dictem diction opendict``
 -  Fasd: `Command-line productivity booster, offers quick access to
    files and directories, inspired by autojump, z and
    v. <https://github.com/clvv/fasd>`__ `Autojump <https://github.com/amix/autojump>`__'ın dizinlerde yaptığı 

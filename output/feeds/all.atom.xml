@@ -32,8 +32,6 @@ uygulamalarını paylaşmak istedim. Liste eksik eklemeler yapacağım.&lt;/p&gt
 &lt;a class="reference external" href="http://arslan.io/"&gt;Fatih Arslan&lt;/a&gt; &lt;a class="reference external" href="http://blog.arsln.org"&gt;eski gunlugunde&lt;/a&gt;
 guzel bir &lt;a class="reference external" href="http://blog.arsln.org/autojump-kendi-kendine-ogrenen-cd-komutu/"&gt;tanitim yazisi&lt;/a&gt; yazmisti.&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.syslogs.org/cheat-command-line-tools-cheatsheets"&gt;Cheat: Command-Line Tools Cheatsheets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Dict:
-&lt;tt class="docutils literal"&gt;aptitude install dict &lt;span class="pre"&gt;dict-devil&lt;/span&gt; &lt;span class="pre"&gt;dict-freedict-eng-tur&lt;/span&gt; \ &lt;span class="pre"&gt;dict-freedict-tur-eng&lt;/span&gt; &lt;span class="pre"&gt;dict-gcide&lt;/span&gt; &lt;span class="pre"&gt;dict-moby-thesaurus&lt;/span&gt; \ &lt;span class="pre"&gt;dict-vera&lt;/span&gt; dictem diction opendict&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;Fasd: &lt;a class="reference external" href="https://github.com/clvv/fasd"&gt;Command-line productivity booster, offers quick access to
 files and directories, inspired by autojump, z and
 v.&lt;/a&gt; &lt;a class="reference external" href="https://github.com/amix/autojump"&gt;Autojump&lt;/a&gt;'ın dizinlerde yaptığı
