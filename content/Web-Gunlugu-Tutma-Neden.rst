@@ -1,4 +1,4 @@
-Web Günlüğü Tutma Nedenim
+Neden Web Günlüğü Tutuyorum
 ############################
 
 :date: 2014-07-31
