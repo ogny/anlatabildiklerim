@@ -31,7 +31,7 @@ DEFAULT_PAGINATION = 100
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME = "/home/orkung/pelican-themes/lazystrap"
+THEME = "/home/orkung/diger/pelican-themes/lazystrap"
 #PLUGIN_PATHS = ['/home/orkung/pelican-plugin']
 #PLUGINS = ['gravatar', 'tipue_search']
 

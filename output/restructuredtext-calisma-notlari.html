@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>reStructuredText Calışma Notları - Anlatabildiklerim</title>
+      <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gunluk.orkungunay.com/theme/css/lazystrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="" />
+    <link rel="canonical" href="http://gunluk.orkungunay.com" />
+    <link href="http://gunluk.orkungunay.com/feeds/all.atom.xml" type="application/rss+xml" rel="alternate" title="Anlatabildiklerim Full ATOM Feed" />
+
+    <meta name="keywords" content=",reStructuredText" />
+</head>
+<body>
+    <div class="page">
+      <div class="header">
+        <a href="http://gunluk.orkungunay.com">
+          <div class="navbar-brand brand"></div>
+        </a>
+        <div class="navbar-desc">
+          
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="post-date pull-right">23.11.2014</div>
+          <h2 class="post-header">reStructuredText Calışma Notları</h2>
+          <div class="post-metadata pull-right">
+            <a href="http://gunluk.orkungunay.com/tag/restructuredtext.html"><b>#</b>reStructuredText</a>
+          </div>
+          <div class="post-content">
+            <div class="section" id="altbaslik">
+<h2>Altbaslik</h2>
+<ul class="simple">
+<li>Yeni paragraf icin 2 paragraf arasindaki bos satir</li>
+</ul>
+<p>bu ilk paragraf</p>
+<p>bu da ikincisi</p>
+<ul class="simple">
+<li>girintilemede onemli olan kac karakter iceriden basladigin degil,
+girintilenecek tum satirlarin ayni bosluk sayisindan basladigi</li>
+<li>baslikta belirleyici olan karakter degil, baslik uzunluguyla karakterin
+ayni uzunlukta olmasi</li>
+<li>italik icin <em>yildiz</em> koyu renk icin <strong>cift yildiz</strong></li>
+</ul>
+<p><tt class="docutils literal">standard bosluklu ifadeler</tt></p>
+<ul class="simple">
+<li>tablolar</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">ilk satir</th>
+<th class="head">ilk sutun</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>ikincisi</td>
+<td>ikinci sutun</td>
+</tr>
+<tr><td>ucuncu</td>
+<td>ucuncu sutun</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Tanim listeleri</li>
+</ul>
+<dl class="docutils">
+<dt>nedir</dt>
+<dd>bu soru nesnenin neligine dair sorulur. felsefede bu soru ile
+baslanir ve bu sorunun cevabi uzerinden yeni sorular aranir.</dd>
+<dt>nasildir</dt>
+<dd>bu soru varolusa dair olmayip seyin epistemolojisine dair sorulan
+sorulardir. sorunun olasi cevaplari bilimin alanina girmektedir.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">yazarlar:</th><td class="field-body">orkun gunay
+ogny
+safruhani</td>
+</tr>
+<tr class="field"><th class="field-name">surum:</th><td class="field-body">0.1 2014/11/23</td>
+</tr>
+<tr class="field"><th class="field-name">Adanma:</th><td class="field-body">kendime.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>baslik</strong></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Date:</th><td class="field-body">22014-11-27</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h2>Altbaslik</h2>
+<blockquote>
+<cite>yorum biceminde yazildi</cite></blockquote>
+<pre class="code sh literal-block">
+<span class="c">#!/bin/bash
+</span><span class="k">for </span>i in <span class="k">$(</span>ls<span class="k">)</span>; <span class="k">do
+        </span>ffmpeg -i <span class="nv">$i</span> -q:a 0 -map
+a <span class="nv">$i</span>.mp3
+<span class="k">done</span>
+</pre>
+<pre class="code cpp literal-block">
+<span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello&quot;</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Deneme:</th><td class="field-body">yedi mi</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id2"><span class="problematic" id="id3">**</span></a>deneme **</p>
+<div class="system-message" id="id2">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/orkung/Git_Repolari/kisisel/public/anlatabildiklerim/content/reStructuredText_calisma_notlari.rst</tt>, line 90); <em><a href="#id3">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<ul class="simple">
+<li>Listeler</li>
+</ul>
+<p>bu alt liste
+bu ikinci liste nesnesi</p>
+</div>
+
+          </div>
+<!--          <div class="post-comments">
+            <h4>Comments</h4>-->
+<!-- place code of your favour comment system here -->          </div> 
+        </div>
+      </div>
+    </div>
+    <footer class="footer-wrapper">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="footer">
+          <a href="http://gunluk.orkungunay.com/archives">Archive</a>
+          <a href="http://gunluk.orkungunay.com/feeds/all.atom.xml">RSS</a>
+        </div>
+        <div class="footer">
+          2014 &copy;  | Powered by <a href="http://getpelican.com">Pelican</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      function validateForm(query)
+        {
+          return (query.length > 2);
+        }
+    </script>
+</body>
+</html>

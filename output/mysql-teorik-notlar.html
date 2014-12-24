@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mysql Teorik Notlar - Anlatabildiklerim</title>
+      <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gunluk.orkungunay.com/theme/css/lazystrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="" />
+    <link rel="canonical" href="http://gunluk.orkungunay.com" />
+    <link href="http://gunluk.orkungunay.com/feeds/all.atom.xml" type="application/rss+xml" rel="alternate" title="Anlatabildiklerim Full ATOM Feed" />
+
+    <meta name="keywords" content=",mysql" />
+</head>
+<body>
+    <div class="page">
+      <div class="header">
+        <a href="http://gunluk.orkungunay.com">
+          <div class="navbar-brand brand"></div>
+        </a>
+        <div class="navbar-desc">
+          
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="post-date pull-right">04.12.2014</div>
+          <h2 class="post-header">Mysql Teorik Notlar</h2>
+          <div class="post-metadata pull-right">
+            <a href="http://gunluk.orkungunay.com/tag/mysql.html"><b>#</b>mysql</a>
+          </div>
+          <div class="post-content">
+            <p><strong>some of the important characteristics of MySQL</strong></p>
+<ul class="simple">
+<li>Fully multi-threaded using kernel threads</li>
+<li>Full operator and function support in the</li>
+</ul>
+<pre class="code mysql literal-block">
+<span class="k">SELECT</span> <span class="nf">CONCAT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">tbl_name</span>
+<span class="k">WHERE</span> <span class="n">income</span><span class="o">/</span><span class="n">dependents</span> <span class="o">&gt;</span> <span class="mi">10000</span> <span class="k">AND</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">;</span>
+</pre>
+<ul class="simple">
+<li>16 indexes per table are allowed. Each index may consist of 1 to 15 columns
+or parts of columns. The maximum index length is 256 bytes (this may be
+changed when compiling MySQL ). An index may use a prefix of a ` CHAR ` or `
+VARCHAR ` field.</li>
+<li>All columns have default values. You can use ` INSERT ` to insert a subset of a table's columns; those columns that are not explicitly given values are set to their default values.</li>
+<li>All data are saved in ISO-8859-1 Latin1 format. All comparisons for normal string columns are case insensitive</li>
+</ul>
+<p><strong>Tanimlar</strong></p>
+<ul class="simple">
+<li>qps: queries per second</li>
+</ul>
+<p><strong>MySQL Stored Procedures</strong></p>
+
+          </div>
+<!--          <div class="post-comments">
+            <h4>Comments</h4>-->
+<!-- place code of your favour comment system here -->          </div> 
+        </div>
+      </div>
+    </div>
+    <footer class="footer-wrapper">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="footer">
+          <a href="http://gunluk.orkungunay.com/archives">Archive</a>
+          <a href="http://gunluk.orkungunay.com/feeds/all.atom.xml">RSS</a>
+        </div>
+        <div class="footer">
+          2014 &copy;  | Powered by <a href="http://getpelican.com">Pelican</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      function validateForm(query)
+        {
+          return (query.length > 2);
+        }
+    </script>
+</body>
+</html>
