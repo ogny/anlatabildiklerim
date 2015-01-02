@@ -63,7 +63,6 @@ Altbaslik
 
         `yorum biceminde yazildi`
 
-
 .. code:: sh
 
         #!/bin/bash
@@ -85,9 +84,7 @@ Altbaslik
     }
 
 
-:Deneme: yedi mi
 
-**deneme **
 
 * Listeler
 

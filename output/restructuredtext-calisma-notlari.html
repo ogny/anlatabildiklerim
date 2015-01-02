@@ -117,8 +117,8 @@ safruhani</td>
 <cite>yorum biceminde yazildi</cite></blockquote>
 <pre class="code sh literal-block">
 <span class="c">#!/bin/bash
-</span><span class="k">for </span>i in <span class="k">$(</span>ls<span class="k">)</span>; <span class="k">do
-        </span>ffmpeg -i <span class="nv">$i</span> -q:a 0 -map
+</span><span class="k">for</span> i in <span class="k">$(</span>ls<span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+        ffmpeg -i <span class="nv">$i</span> -q:a <span class="m">0</span> -map
 a <span class="nv">$i</span>.mp3
 <span class="k">done</span>
 </pre>
@@ -133,18 +133,6 @@ a <span class="nv">$i</span>.mp3
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field"><th class="field-name">Deneme:</th><td class="field-body">yedi mi</td>
-</tr>
-</tbody>
-</table>
-<p><a href="#id2"><span class="problematic" id="id3">**</span></a>deneme **</p>
-<div class="system-message" id="id2">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/orkung/Git_Repolari/kisisel/public/anlatabildiklerim/content/reStructuredText_calisma_notlari.rst</tt>, line 90); <em><a href="#id3">backlink</a></em></p>
-Inline strong start-string without end-string.</div>
 <ul class="simple">
 <li>Listeler</li>
 </ul>

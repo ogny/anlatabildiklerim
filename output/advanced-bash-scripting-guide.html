@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advanced Bash Scripting Guide - Anlatabildiklerim</title>
+      <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://gunluk.orkungunay.com/theme/css/lazystrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="" />
+    <link rel="canonical" href="http://gunluk.orkungunay.com" />
+    <link href="http://gunluk.orkungunay.com/feeds/all.atom.xml" type="application/rss+xml" rel="alternate" title="Anlatabildiklerim Full ATOM Feed" />
+
+    <meta name="keywords" content="," />
+</head>
+<body>
+    <div class="page">
+      <div class="header">
+        <a href="http://gunluk.orkungunay.com">
+          <div class="navbar-brand brand"></div>
+        </a>
+        <div class="navbar-desc">
+          
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="post-date pull-right">02.01.2015</div>
+          <h2 class="post-header">Advanced Bash Scripting Guide</h2>
+          <div class="post-metadata pull-right">
+          </div>
+          <div class="post-content">
+            <ul class="simple">
+<li><strong>motto</strong>: The only way to really learn scripting is to write scripts.</li>
+</ul>
+<div class="section" id="ne-ogrendim">
+<h2>Ne ogrendim?</h2>
+<div class="section" id="syntax-a-dair">
+<h3>Syntax'a dair;</h3>
+<ul class="simple">
+<li>COMMENT satiri devam ettiginde basina + koy</li>
+<li>Degisken adini kucuk harf tanimladiysan $ ile cagiriken kucuk harle, veya
+sekilde cagir.</li>
+<li>Bulundugun dizindeki betigi cagiriyorken basa ./ ekle, neden?
+for security reasons, the current directory (./) is not by default included
+in a user's $PATH. It is therefore necessary to explicitly invoke the script
+in the current directory with a ./scriptname</li>
+</ul>
+</div>
+<div class="section" id="lazim-olabilecek-kod-parcalari">
+<h3>Lazim olabilecek Kod parcalari</h3>
+<ul class="simple">
+<li>The following script prolog tests whether the script has been invoked with
+the correct number of parameters.</li>
+</ul>
+<pre class="code sh literal-block">
+<span class="nv">E_WRONG_ARGS</span><span class="o">=</span>85
+<span class="nv">script_parameters</span><span class="o">=</span><span class="s2">&quot;-a -h -m -z&quot;</span>
+<span class="c">#                  -a = all, -h = help, etc.
+</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-ne <span class="nv">$Number_of_expected_args</span> <span class="o">]</span>
+<span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;Usage: `basename </span><span class="nv">$0</span><span class="s2">` </span><span class="nv">$script_parameters</span><span class="s2">&quot;</span>
+  <span class="c"># `basename $0` is the script's filename.
+</span>  <span class="nb">exit</span> <span class="nv">$E_WRONG_ARGS</span>
+<span class="k">fi</span>
+</pre>
+</div>
+<div class="section" id="special-characters">
+<h3>Special Characters</h3>
+<ul class="simple">
+<li>Terminator in a case option</li>
+</ul>
+<pre class="code sh literal-block">
+<span class="p">;;</span>
+</pre>
+<ul class="simple">
+<li>Terminators in a case option (version 4+ of Bash).</li>
+</ul>
+<pre class="code sh literal-block">
+<span class="p">;;&amp;</span>, <span class="p">;&amp;</span>
+</pre>
+<ul class="simple">
+<li>The <em>comma</em> operator can also concatenate strings</li>
+</ul>
+<pre class="code sh literal-block">
+<span class="k">for</span> file in /<span class="o">{</span>,usr/<span class="o">}</span>bin/*calc
+<span class="c">#             ^    Find all executable files ending in &quot;calc&quot;
+#+                 in /bin and /usr/bin directories.
+</span><span class="k">do</span>
+        <span class="k">if</span> <span class="o">[</span> -x <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="o">]</span>
+        <span class="k">then</span>
+          <span class="nb">echo</span> <span class="nv">$file</span>
+        <span class="k">fi</span>
+<span class="k">done</span>
+</pre>
+</div>
+</div>
+
+          </div>
+<!--          <div class="post-comments">
+            <h4>Comments</h4>-->
+<!-- place code of your favour comment system here -->          </div> 
+        </div>
+      </div>
+    </div>
+    <footer class="footer-wrapper">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="footer">
+          <a href="http://gunluk.orkungunay.com/archives">Archive</a>
+          <a href="http://gunluk.orkungunay.com/feeds/all.atom.xml">RSS</a>
+        </div>
+        <div class="footer">
+          2014 &copy;  | Powered by <a href="http://getpelican.com">Pelican</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+      function validateForm(query)
+        {
+          return (query.length > 2);
+        }
+    </script>
+</body>
+</html>
