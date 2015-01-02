@@ -165,45 +165,7 @@ a &lt;span class="nv"&gt;$i&lt;/span&gt;.mp3
 &lt;p&gt;bu alt liste
 bu ikinci liste nesnesi&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="reStructuredText"></category></entry><entry><title>Neden ve Nasıl Web Günlüğü Tutuyorum</title><link href="http://gunluk.orkungunay.com/neden-ve-nasil-web-gunlugu-tutuyorum.html" rel="alternate"></link><updated>2014-11-02T23:15:00+02:00</updated><author><name>orkung</name></author><id>tag:gunluk.orkungunay.com,2014-11-02:neden-ve-nasil-web-gunlugu-tutuyorum.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Neden&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir
-rüzgaryardım etmez.&lt;/em&gt;·&lt;/p&gt;
-&lt;p&gt;Web günlüğü tutmak bir ihtiyaç mıdır?&lt;/p&gt;
-&lt;p&gt;Neden diğer araçlar değil de web günlüğü?&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Çalışırken aldığım notları Github'a koyuyorum. O notlardan bir belge
-oluşturacak olsam bu işi gitbook'la yapardım. Web günlüğü bu ikisinin
-arasında bir yerde yazmak istediğimde işime yarıyor.&lt;/li&gt;
-&lt;li&gt;Web günlüğümde, karşılaştığım problemleri etraflıca ele alacağım.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Nasil&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Günlüğü tutmamı sağlayan araçların listesi:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Platform: &lt;strong&gt;Pelican&lt;/strong&gt; Static Site Generator&lt;/li&gt;
-&lt;li&gt;Tema: &lt;strong&gt;Lazystrap&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Biçimlendirme dili: &lt;strong&gt;reStructuredText&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Metin editörü: &lt;strong&gt;Vim&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Versiyonlama: &lt;strong&gt;Github&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Deployment yöntemi: &lt;strong&gt;Rsync&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
-Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu
-sebepten bu araçların nasıl kullanıldıklarına burada girmeyeceğim.&lt;/p&gt;
-&lt;p&gt;Eksikler;&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Yorum yazma alani eklenecek. (Disqus)&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="web"></category></entry><entry><title>Neden Web Günlüğü Tutuyorum</title><link href="http://gunluk.orkungunay.com/neden-web-gunlugu-tutuyorum.html" rel="alternate"></link><updated>2014-07-31T00:00:00+03:00</updated><author><name>orkung</name></author><id>tag:gunluk.orkungunay.com,2014-07-31:neden-web-gunlugu-tutuyorum.html</id><summary type="html">&lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir rüzgar
-yardım etmez.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Web günlüğü tutmak bir ihtiyaç mıdır?&lt;/p&gt;
-&lt;p&gt;Neden diğer araçlar değil de web günlüğü?&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Çalışırken aldığım notları Github'a koyuyorum. O notlardan bir belge
-oluşturacak olsam bu işi gitbook'la yapardım. Web günlüğü bu
-ikisinin arasında bir yerde yazmak istediğimde işime yarıyor.&lt;/li&gt;
-&lt;li&gt;Web günlüğümde, karşılaştığım problemleri etraflıca ele alacağım.&lt;/li&gt;
-&lt;/ul&gt;
-</summary><category term="web"></category></entry><entry><title>Mysql Teorik Notlar</title><link href="http://gunluk.orkungunay.com/mysql-teorik-notlar.html" rel="alternate"></link><updated>2014-04-12T00:00:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2014-04-12:mysql-teorik-notlar.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;some of the important characteristics of MySQL&lt;/strong&gt;&lt;/p&gt;
+</summary><category term="reStructuredText"></category></entry><entry><title>Mysql Teorik Notlar</title><link href="http://gunluk.orkungunay.com/mysql-teorik-notlar.html" rel="alternate"></link><updated>2014-04-12T00:00:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2014-04-12:mysql-teorik-notlar.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;some of the important characteristics of MySQL&lt;/strong&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Fully multi-threaded using kernel threads&lt;/li&gt;
 &lt;li&gt;Full operator and function support in the&lt;/li&gt;
@@ -225,7 +187,38 @@ VARCHAR ` field.&lt;/li&gt;
 &lt;li&gt;qps: queries per second&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;MySQL Stored Procedures&lt;/strong&gt;&lt;/p&gt;
-</summary><category term="mysql"></category></entry><entry><title>Kullandığım Terminal Uygulamaları</title><link href="http://gunluk.orkungunay.com/kullandigim-terminal-uygulamalari.html" rel="alternate"></link><updated>2013-10-21T00:41:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2013-10-21:kullandigim-terminal-uygulamalari.html</id><summary type="html">&lt;p&gt;Kullanım alışkanlığını edinirseniz hayatınızı kolaylaştıran terminal
+</summary><category term="mysql"></category></entry><entry><title>Neden ve Nasıl Web Günlüğü Tutuyorum - Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/neden-ve-nasil-web-gunlugu-tutuyorum-anlatabildiklerim.html" rel="alternate"></link><updated>2014-02-11T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2014-02-11:neden-ve-nasil-web-gunlugu-tutuyorum-anlatabildiklerim.html</id><summary type="html">&lt;div class="section" id="neden-ve-nasil-web-gunlugu-tutuyorum"&gt;
+&lt;h2&gt;Neden ve Nasıl Web Günlüğü Tutuyorum&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Neden&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir
+rüzgaryardım etmez.&lt;/em&gt;·&lt;/p&gt;
+&lt;p&gt;Web günlüğü tutmak bir ihtiyaç mıdır?&lt;/p&gt;
+&lt;p&gt;Neden diğer araçlar değil de web günlüğü?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Çalışırken aldığım notları Github'a koyuyorum. O notlardan bir belge
+oluşturacak olsam bu işi gitbook'la yapardım. Web günlüğü bu ikisinin
+arasında bir yerde yazmak istediğimde işime yarıyor.&lt;/li&gt;
+&lt;li&gt;Web günlüğümde, karşılaştığım problemleri etraflıca ele alacağım.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Nasil&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Günlüğü tutmamı sağlayan araçların listesi:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Platform: &lt;strong&gt;Pelican&lt;/strong&gt; Static Site Generator&lt;/li&gt;
+&lt;li&gt;Tema: &lt;strong&gt;Lazystrap&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Biçimlendirme dili: &lt;strong&gt;reStructuredText&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Metin editörü: &lt;strong&gt;Vim&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Versiyonlama: &lt;strong&gt;Github&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Deployment yöntemi: &lt;strong&gt;Rsync&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
+Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu sebepten bu
+araçların nasıl kullanıldıklarına burada girmeyeceğim.&lt;/p&gt;
+&lt;p&gt;Eksikler;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Yorum yazma alani eklenecek. (Disqus)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Kullandığım Terminal Uygulamaları</title><link href="http://gunluk.orkungunay.com/kullandigim-terminal-uygulamalari.html" rel="alternate"></link><updated>2013-10-21T00:41:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2013-10-21:kullandigim-terminal-uygulamalari.html</id><summary type="html">&lt;p&gt;Kullanım alışkanlığını edinirseniz hayatınızı kolaylaştıran terminal
 uygulamalarını paylaşmak istedim. Liste eksik eklemeler yapacağım.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/amix/autojump"&gt;autojump kendi kendine ogrenen cd komutu&lt;/a&gt;:
