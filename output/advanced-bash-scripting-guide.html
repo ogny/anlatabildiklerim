@@ -48,7 +48,7 @@
 <ul class="simple">
 <li>COMMENT satiri devam ettiginde basina + koy</li>
 <li>Degisken adini kucuk harf tanimladiysan $ ile cagiriken kucuk harle, veya
-sekilde cagir.</li>
+tersi sekilde cagir.</li>
 <li>Bulundugun dizindeki betigi cagiriyorken basa ./ ekle, neden?
 for security reasons, the current directory (./) is not by default included
 in a user's $PATH. It is therefore necessary to explicitly invoke the script
@@ -102,6 +102,49 @@ the correct number of parameters.</li>
         <span class="k">fi</span>
 <span class="k">done</span>
 </pre>
+<p><strong>Not</strong>: comma operatoru degisiklik yapilacak sistem
+dosyasinin yedegi alinirken gunluk olarak kullaniliyor</p>
+<pre class="code sh literal-block">
+cp dosya<span class="o">{</span>,.original<span class="o">}</span>
+</pre>
+<ul class="simple">
+<li>Lowercase conversion in parameter substitution</li>
+</ul>
+<pre class="code sh literal-block">
+,, ,
+</pre>
+<ul class="simple">
+<li>command substitution. The <cite>command</cite> construct makes available the output of
+command for assignment to a variable. This is also known as backquotes or
+backticks.</li>
+</ul>
+<pre class="code sh literal-block">
+<span class="sb">`</span>
+</pre>
+<ul class="simple">
+<li>null command [colon]. This is the shell equivalent of a &quot;NOP&quot; (no op, a
+do-nothing operation). It may be considered a synonym for the shell builtin
+true. The &quot;:&quot; command is itself a Bash builtin, and its exit status is true</li>
+</ul>
+<pre class="code sh literal-block">
+<span class="o">(</span>0<span class="o">)</span>.:echo <span class="nv">$?</span>   <span class="c"># 0</span>
+</pre>
+<ul class="simple">
+<li>Variable expansion / substring replacement.In com bination with the &gt;
+redirection operator, truncates a file to zero length, without changing its
+permissions. If the file did not previously exist, creates it.</li>
+</ul>
+<pre class="code sh literal-block">
+: &gt; data.xxx   <span class="c"># File &quot;data.xxx&quot; now empty.
+</span>
+<span class="c"># Same effect as   cat /dev/null &gt;data.xxx
+# However, this does not fork a new process, since &quot;:&quot; is a builtin.</span>
+</pre>
+<ul class="simple">
+<li>The &quot;?&quot; character serves as a single-character &quot;wild card&quot; for
+filename expansion in globbing, as well as representing one character in an
+extended regular expression.</li>
+</ul>
 </div>
 </div>
 

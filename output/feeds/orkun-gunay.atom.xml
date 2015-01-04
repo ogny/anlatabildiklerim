@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2015-01-02T00:00:00+02:00</updated><entry><title>Advanced Bash Scripting Guide</title><link href="http://gunluk.orkungunay.com/advanced-bash-scripting-guide.html" rel="alternate"></link><updated>2015-01-02T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-02:advanced-bash-scripting-guide.html</id><summary type="html">&lt;ul class="simple"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2015-04-01T00:00:00+03:00</updated><entry><title>iş sonrası yaşananlar</title><link href="http://gunluk.orkungunay.com/is-sonrasi-yasananlar.html" rel="alternate"></link><updated>2015-04-01T00:00:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-04-01:is-sonrasi-yasananlar.html</id><summary type="html">&lt;div class="section" id="ogrendiklerim"&gt;
+&lt;h2&gt;Öğrendiklerim&lt;/h2&gt;
+&lt;p&gt;İş hayatında sıkıcı bir tekdüzeliğin içerisinde kendimi kaybetmiş
+vaziyetteydim. İşi bırakınca kaybolduğum o keşmekeşten de kurtuldum. Bol bol
+kendime vakit ayırabiliyorum, bu süreçte aşağıdaki konularda bazı bilgiler
+edindim. sizinle de paylaşmak istiyorum.&lt;/p&gt;
+&lt;div class="section" id="saglik-spor"&gt;
+&lt;h3&gt;Sağlık - Spor&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;DR M. Mosley'in tv programları tam anlamıyla tabu deviren cinsten. 2
+programını izledim&lt;ul&gt;
+&lt;li&gt;intermittent fasting (aralıklı oruç) 5:2&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Intermittent_fasting"&gt;wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://thefastdiet.co.uk/r"&gt;kendi sitesi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dogal-yasam"&gt;
+&lt;h3&gt;Doğal Yaşam&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bahis"&gt;
+&lt;h3&gt;Bahis&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bati-medeniyeti"&gt;
+&lt;h3&gt;Batı Medeniyeti&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="section" id="digiturk"&gt;
+&lt;h3&gt;Digitürk&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ahlak"&gt;
+&lt;h3&gt;Ahlak&lt;/h3&gt;
+&lt;p&gt;(çin'in gelişiminde her şeyi yapmaya izin veren hoşgörü ahlakları ve
+tayland'daki ladyboy'ların tanınması.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Advanced Bash Scripting Guide</title><link href="http://gunluk.orkungunay.com/advanced-bash-scripting-guide.html" rel="alternate"></link><updated>2015-01-02T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-02:advanced-bash-scripting-guide.html</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;motto&lt;/strong&gt;: The only way to really learn scripting is to write scripts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="section" id="ne-ogrendim"&gt;
@@ -9,7 +47,7 @@
 &lt;ul class="simple"&gt;
 &lt;li&gt;COMMENT satiri devam ettiginde basina + koy&lt;/li&gt;
 &lt;li&gt;Degisken adini kucuk harf tanimladiysan $ ile cagiriken kucuk harle, veya
-sekilde cagir.&lt;/li&gt;
+tersi sekilde cagir.&lt;/li&gt;
 &lt;li&gt;Bulundugun dizindeki betigi cagiriyorken basa ./ ekle, neden?
 for security reasons, the current directory (./) is not by default included
 in a user's $PATH. It is therefore necessary to explicitly invoke the script
@@ -63,6 +101,49 @@ the correct number of parameters.&lt;/li&gt;
         &lt;span class="k"&gt;fi&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Not&lt;/strong&gt;: comma operatoru degisiklik yapilacak sistem
+dosyasinin yedegi alinirken gunluk olarak kullaniliyor&lt;/p&gt;
+&lt;pre class="code sh literal-block"&gt;
+cp dosya&lt;span class="o"&gt;{&lt;/span&gt;,.original&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Lowercase conversion in parameter substitution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code sh literal-block"&gt;
+,, ,
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;command substitution. The &lt;cite&gt;command&lt;/cite&gt; construct makes available the output of
+command for assignment to a variable. This is also known as backquotes or
+backticks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code sh literal-block"&gt;
+&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;null command [colon]. This is the shell equivalent of a &amp;quot;NOP&amp;quot; (no op, a
+do-nothing operation). It may be considered a synonym for the shell builtin
+true. The &amp;quot;:&amp;quot; command is itself a Bash builtin, and its exit status is true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code sh literal-block"&gt;
+&lt;span class="o"&gt;(&lt;/span&gt;0&lt;span class="o"&gt;)&lt;/span&gt;.:echo &lt;span class="nv"&gt;$?&lt;/span&gt;   &lt;span class="c"&gt;# 0&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Variable expansion / substring replacement.In com bination with the &amp;gt;
+redirection operator, truncates a file to zero length, without changing its
+permissions. If the file did not previously exist, creates it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code sh literal-block"&gt;
+: &amp;gt; data.xxx   &lt;span class="c"&gt;# File &amp;quot;data.xxx&amp;quot; now empty.
+&lt;/span&gt;
+&lt;span class="c"&gt;# Same effect as   cat /dev/null &amp;gt;data.xxx
+# However, this does not fork a new process, since &amp;quot;:&amp;quot; is a builtin.&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &amp;quot;?&amp;quot; character serves as a single-character &amp;quot;wild card&amp;quot; for
+filename expansion in globbing, as well as representing one character in an
+extended regular expression.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </summary></entry><entry><title>reStructuredText Calışma Notları</title><link href="http://gunluk.orkungunay.com/restructuredtext-calisma-notlari.html" rel="alternate"></link><updated>2014-11-23T21:20:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2014-11-23:restructuredtext-calisma-notlari.html</id><summary type="html">&lt;div class="section" id="altbaslik"&gt;
