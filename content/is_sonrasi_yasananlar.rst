@@ -18,9 +18,10 @@ Sağlık - Spor
 A. intermittent fasting (aralıklı oruç) [*]_
 
 5:2 Haftanın 2 günü oruç tutma veya haftanın her günü 16 saat hiçbir şey
-yemeden geçirerek yapılan orucun faydaları üzerine. Konuyu en iyi aciklayan
-yazi `Mercola'nin sitesinden: <http://www.mercola.com>`_
-
+yemeden geçirerek yapılan orucun faydaları üzerine. `Mercola'nin sitesinden:
+<http://www.mercola.com>`_ alıntıladığım iki bölüm, orucun sağlıkta yarattığı
+değişimi göstermesi açısından çarpıcı. 
+ 
 "Normalizing your insulin and leptin sensitivity, and boosting
 mitochondrial energy efficiency: One of the primary mechanisms that makes
 intermittent fasting so beneficial for health is related to its impact on
@@ -32,6 +33,12 @@ fasting helps reset your body to use fat as its primary fuel, and mounting
 evidence confirms that when your body becomes adapted to burning FAT
 instead of sugar as its primary fuel, you dramatically reduce your risk of
 chronic disease"
+
+Promoting human growth hormone (HGH) production: Research has shown fasting can
+raise HGH by as much as 1,300 percent in women, and 2,000 percent in men,2
+which plays an important part in health, fitness, and slowing the aging
+process. HGH is also a fat-burning hormone, which helps explain why fasting is
+so effective for weight loss
 
 B. Sindirim: 
 
