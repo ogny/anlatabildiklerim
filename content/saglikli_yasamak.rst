@@ -1,20 +1,14 @@
-=====================
-iş sonrası yaşananlar
-=====================
+================
+Sağlıklı Yaşamak
+================
 
 :date: 2015.01.04
-:tags: sağlık,medeniyet
+:tags: sağlık
+       
 
-İş hayatında sıkıcı bir tekdüzeliğin içerisinde kendimi kaybetmiş
-vaziyetteydim. İşi bırakınca kaybolduğum o keşmekeşten de kurtuldum. Bol bol
-kendime vakit ayırabiliyorum, bu süreçte aşağıdaki konularda bazı bilgiler
-edindim. sizinle de paylaşmak istiyorum.
+Dr. Mosley'in BBC Knowledge'daki tv programlarini izleme firsati buldum.
+Bolumlerle ilgili notlarimi paylasiyorum;
 
-Sağlık - Spor
-=============
-
-#. Dr. Mosley'in BBC Knowledge'daki tv programlari;
-  
 A. intermittent fasting (aralıklı oruç) [*]_
 
 5:2 Haftanın 2 günü oruç tutma veya haftanın her günü 16 saat hiçbir şey
@@ -88,37 +82,8 @@ genetik problem olduğu için akciğer-kalp sisteminde gelişme olmadı.
 Mosley'in dikkat ettiği iki konu da çok önemli; egzersiz tekniği ve oturmaması.
 Bu ikisini birarada yapabilirsek sağlıklı kalabiliriz.
 
-Batı ve Doğu Medeniyetleri
-==========================
-
-* Avusturya'da Tuna nehri, dibindeki çakıl taşlarını sürükleyerek
-  derinliğini arttırıyor, bu da oluşturduğu ekosistemin bozulmasına neden
-  oluyor. Nehir mühendisleri çeşitli müdahalelerle sürüklenen çakıl
-  taşlarının yerlerine yenisini koymaya çalışıyorlar.
-
-* Evrimsel biyologlar insanlardaki ahlak yapısını anlamak için insanlara
-  çeşitli testler yapıyor. Örneğin bir trenin frenleri boşalıyor, trenin
-  geldiği yöndeki iki hattan birinde 1 kişi, diğerinde 5 kişi var, trenin
-  hangi hattan gideceğini belirleyebiliyorsun, bu durumda hangi hatta
-  yönlendirirdin? diye sorduklarında %95 oranında insan treni 1 kişinin
-  öldüğü hatta yönlendiriyor. Soruyu şöyle değiştiriyorlar, tek hat var,
-  eğer bir kişinin öldüğü yere gidip onu raylara itersen 5 kişi kurtulacak,
-  ne yaparsın? diye sorulduğunda ise %85 oranında insan  o kişiyi itmeyi
-  seçmiyor. Soruyu biraz daha değiştiriyorlar; 5 kişinin hayatını kurtarmak
-  için kendini raya atar mıydın?  İnsanı anlamak için çok değerli sorular.
-
-* Tayland nüfusunun %1'i trans cinslerden oluşuyormuş, transseksüellere
-  'ladyboy' diyorlar. Dinlerinin ve toplum yapılarının da etkisiyle
-  translara yönelik ayrımcılık yapılmıyor. Aksine, izlediğim program Dünya
-  Ladyboy güzellik yarışmasıydı, yarışma gününün sabahı güzeller ana akım
-  tv programına konuk oldular. Tayland, çevre ülkelerden de trans göçü
-  alıyor. Bir çok transseksüel cinsiyet değiştirme ameliyatı için
-  Tayland'ı tercih ediyor. 
-
-
 .. [*] Kaynaklar: 
 
 - `wikipedia <http://en.wikipedia.org/wiki/Intermittent_fasting>`_
 - `Dr. Mosley'in fastdiet sitesi: <https://thefastdiet.co.uk/r>`_
 - `Yukaridaki alintiyi yaptigim Mercola'nin sitesi: <http://www.mercola.com>`_
-

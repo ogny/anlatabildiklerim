@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2015-01-04T00:00:00+02:00</updated><entry><title>iş sonrası yaşananlar</title><link href="http://gunluk.orkungunay.com/is-sonrasi-yasananlar.html" rel="alternate"></link><updated>2015-01-04T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-04:is-sonrasi-yasananlar.html</id><summary type="html">&lt;p&gt;İş hayatında sıkıcı bir tekdüzeliğin içerisinde kendimi kaybetmiş
-vaziyetteydim. İşi bırakınca kaybolduğum o keşmekeşten de kurtuldum. Bol bol
-kendime vakit ayırabiliyorum, bu süreçte aşağıdaki konularda bazı bilgiler
-edindim. sizinle de paylaşmak istiyorum.&lt;/p&gt;
-&lt;div class="section" id="saglik-spor"&gt;
-&lt;h2&gt;Sağlık - Spor&lt;/h2&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;Dr. Mosley'in BBC Knowledge'daki tv programlari;&lt;/li&gt;
-&lt;/ol&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2015-01-04T00:00:00+02:00</updated><entry><title>Sağlıklı Yaşamak</title><link href="http://gunluk.orkungunay.com/saglikli-yasamak.html" rel="alternate"></link><updated>2015-01-04T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-04:saglikli-yasamak.html</id><summary type="html">&lt;p&gt;Dr. Mosley'in BBC Knowledge'daki tv programlarini izleme firsati buldum.
+Bolumlerle ilgili notlarimi paylasiyorum;&lt;/p&gt;
 &lt;ol class="upperalpha simple"&gt;
 &lt;li&gt;intermittent fasting (aralıklı oruç) &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[*]&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -70,9 +63,19 @@ Yemekten sonra oluşan insülin direnci düştü, ancak kardiyo vasküler yapıs
 genetik problem olduğu için akciğer-kalp sisteminde gelişme olmadı.&lt;/p&gt;
 &lt;p&gt;Mosley'in dikkat ettiği iki konu da çok önemli; egzersiz tekniği ve oturmaması.
 Bu ikisini birarada yapabilirsek sağlıklı kalabiliriz.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bati-ve-dogu-medeniyetleri"&gt;
-&lt;h2&gt;Batı ve Doğu Medeniyetleri&lt;/h2&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[*]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kaynaklar:&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Intermittent_fasting"&gt;wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://thefastdiet.co.uk/r"&gt;Dr. Mosley'in fastdiet sitesi:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.mercola.com"&gt;Yukaridaki alintiyi yaptigim Mercola'nin sitesi:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="sağlık"></category></entry><entry><title>TV Programlarindan Kültürel Haberler</title><link href="http://gunluk.orkungunay.com/tv-programlarindan-kulturel-haberler.html" rel="alternate"></link><updated>2015-01-04T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-04:tv-programlarindan-kulturel-haberler.html</id><summary type="html">&lt;p&gt;Aşağıdaki notları tv'de izlediğim programlardan çıkarttım. Türkiye'de yaşamı
+sürdürürken böyle umut dolu çalışmalardan haberdar olmak iyi geliyor.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Avusturya'da Tuna nehri, dibindeki çakıl taşlarını sürükleyerek
 derinliğini arttırıyor, bu da oluşturduğu ekosistemin bozulmasına neden
@@ -96,19 +99,7 @@ tv programına konuk oldular. Tayland, çevre ülkelerden de trans göçü
 alıyor. Bir çok transseksüel cinsiyet değiştirme ameliyatı için
 Tayland'ı tercih ediyor.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
-&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
-&lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[*]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kaynaklar:&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Intermittent_fasting"&gt;wikipedia&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://thefastdiet.co.uk/r"&gt;Dr. Mosley'in fastdiet sitesi:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.mercola.com"&gt;Yukaridaki alintiyi yaptigim Mercola'nin sitesi:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</summary><category term="sağlık"></category><category term="medeniyet"></category></entry><entry><title>Advanced Bash Scripting Guide</title><link href="http://gunluk.orkungunay.com/advanced-bash-scripting-guide.html" rel="alternate"></link><updated>2015-01-02T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-02:advanced-bash-scripting-guide.html</id><summary type="html">&lt;ul class="simple"&gt;
+</summary><category term="kültür"></category><category term="tv"></category></entry><entry><title>Advanced Bash Scripting Guide</title><link href="http://gunluk.orkungunay.com/advanced-bash-scripting-guide.html" rel="alternate"></link><updated>2015-01-02T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-02:advanced-bash-scripting-guide.html</id><summary type="html">&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;motto&lt;/strong&gt;: The only way to really learn scripting is to write scripts.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="section" id="ne-ogrendim"&gt;
