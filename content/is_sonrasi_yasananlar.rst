@@ -40,6 +40,24 @@ which plays an important part in health, fitness, and slowing the aging
 process. HGH is also a fat-burning hormone, which helps explain why fasting is
 so effective for weight loss
 
+`yeni başlayanlar için aralıklı oruç yazısında
+<http://fitness.mercola.com/sites/fitness/archive/2013/11/08/beginners-guide-intermittent-fasting.aspx>`_
+, orucun tam zıddı olan sık sık az yeme teziyle bir tartışma mevcut. hem de
+`Lean Gains'in kaleminden
+<http://www.leangains.com/2009/12/new-meal-frequency-study.html>`_;
+
+"…The premise underlying the present study was that increasing meal frequency
+would lead to better short-term appetite regulation and increased dietary
+compliance; furthermore, it was hypothesized that these predicted beneficial
+effects of increased meal frequency could have resulted from more favorable gut
+peptide profiles, potentially leading to greater weight loss. Under the
+conditions described in the present study, all three hypotheses were rejected."
+
+"…We had postulated that increasing meal frequency would enhance the compliance
+to the energy restricted diet thus leading to greater weight loss, an effect
+possibly mediated by increased fullness. The present results do not support
+this hypothesis."
+
 B. Sindirim: 
 
 İnce bağırsağımızda da nöronlar var, yaklaşık olarak bir kedinin beynindeki
