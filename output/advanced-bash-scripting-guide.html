@@ -38,7 +38,7 @@
 <h2>Ne ogrendim?</h2>
 <div class="section" id="syntax-a-dair">
 <h3>Syntax'a dair;</h3>
-<ul class="simple">
+<ol class="arabic simple">
 <li>COMMENT satiri devam ettiginde basina + koy</li>
 <li>Degisken adini kucuk harf tanimladiysan $ ile cagiriken kucuk harle, veya
 tersi sekilde cagir.</li>
@@ -46,21 +46,21 @@ tersi sekilde cagir.</li>
 for security reasons, the current directory (./) is not by default included
 in a user's $PATH. It is therefore necessary to explicitly invoke the script
 in the current directory with a ./scriptname</li>
-</ul>
+</ol>
 </div>
 <div class="section" id="lazim-olabilecek-kod-parcalari">
 <h3>Lazim olabilecek Kod parcalari</h3>
-<ul class="simple">
+<ol class="arabic simple">
 <li>The following script prolog tests whether the script has been invoked with
 the correct number of parameters.</li>
-</ul>
+</ol>
 <pre class="code sh literal-block">
 <span class="nv">E_WRONG_ARGS</span><span class="o">=</span>85
-<span class="nv">script_parameters</span><span class="o">=</span><span class="s2">&quot;-a -h -m -z&quot;</span>
-<span class="c">#                  -a = all, -h = help, etc.
+<span class="nv">script_parameters</span><span class="o">=</span><span class="s2">&quot;#.a #.h #.m #.z&quot;</span>
+<span class="c">#                  #.a = all, #.h = help, etc.
 </span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-ne <span class="nv">$Number_of_expected_args</span> <span class="o">]</span>
-<span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span><span class="c">#.ne $Number_of_expected_args ]
+</span><span class="k">then</span>
   <span class="nb">echo</span> <span class="s2">&quot;Usage: `basename </span><span class="nv">$0</span><span class="s2">` </span><span class="nv">$script_parameters</span><span class="s2">&quot;</span>
   <span class="c"># `basename $0` is the script's filename.
 </span>  <span class="nb">exit</span> <span class="nv">$E_WRONG_ARGS</span>
@@ -69,28 +69,18 @@ the correct number of parameters.</li>
 </div>
 <div class="section" id="special-characters">
 <h3>Special Characters</h3>
-<ul class="simple">
-<li>Terminator in a case option</li>
-</ul>
-<pre class="code sh literal-block">
-<span class="p">;;</span>
-</pre>
-<ul class="simple">
-<li>Terminators in a case option (version 4+ of Bash).</li>
-</ul>
-<pre class="code sh literal-block">
-<span class="p">;;&amp;</span>, <span class="p">;&amp;</span>
-</pre>
-<ul class="simple">
+<ol class="arabic simple">
+<li><tt class="docutils literal">;;</tt> Terminator in a case option</li>
+<li><tt class="docutils literal"><span class="pre">;;&amp;,</span> ;&amp;</tt> Terminators in a case option (version 4+ of Bash).</li>
 <li>The <em>comma</em> operator can also concatenate strings</li>
-</ul>
+</ol>
 <pre class="code sh literal-block">
 <span class="k">for</span> file in /<span class="o">{</span>,usr/<span class="o">}</span>bin/*calc
 <span class="c">#             ^    Find all executable files ending in &quot;calc&quot;
 #+                 in /bin and /usr/bin directories.
 </span><span class="k">do</span>
-        <span class="k">if</span> <span class="o">[</span> -x <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> <span class="o">]</span>
-        <span class="k">then</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="c">#.x &quot;$file&quot; ]
+</span>        <span class="k">then</span>
           <span class="nb">echo</span> <span class="nv">$file</span>
         <span class="k">fi</span>
 <span class="k">done</span>
@@ -100,44 +90,132 @@ dosyasinin yedegi alinirken gunluk olarak kullaniliyor</p>
 <pre class="code sh literal-block">
 cp dosya<span class="o">{</span>,.original<span class="o">}</span>
 </pre>
-<ul class="simple">
-<li>Lowercase conversion in parameter substitution</li>
-</ul>
-<pre class="code sh literal-block">
-,, ,
-</pre>
-<ul class="simple">
-<li>command substitution. The <cite>command</cite> construct makes available the output of
+<ol class="arabic simple">
+<li><tt class="docutils literal">,, ,</tt> Lowercase conversion in parameter substitution</li>
+<li><tt class="docutils literal">`</tt> command substitution. The <cite>command</cite> construct makes available the output of
 command for assignment to a variable. This is also known as backquotes or
 backticks.</li>
-</ul>
-<pre class="code sh literal-block">
-<span class="sb">`</span>
-</pre>
-<ul class="simple">
-<li>null command [colon]. This is the shell equivalent of a &quot;NOP&quot; (no op, a
-do-nothing operation). It may be considered a synonym for the shell builtin
+<li><tt class="docutils literal">:</tt> null command [colon]. This is the shell equivalent of a &quot;NOP&quot; (no op, a
+do#.nothing operation). It may be considered a synonym for the shell builtin
 true. The &quot;:&quot; command is itself a Bash builtin, and its exit status is true</li>
-</ul>
+</ol>
 <pre class="code sh literal-block">
 <span class="o">(</span>0<span class="o">)</span>.:echo <span class="nv">$?</span>   <span class="c"># 0</span>
 </pre>
-<ul class="simple">
-<li>Variable expansion / substring replacement.In com bination with the &gt;
+<ol class="arabic simple">
+<li>Variable expansion / substring replacement.In combination with the &gt;
 redirection operator, truncates a file to zero length, without changing its
 permissions. If the file did not previously exist, creates it.</li>
-</ul>
+</ol>
 <pre class="code sh literal-block">
 : &gt; data.xxx   <span class="c"># File &quot;data.xxx&quot; now empty.
 </span>
 <span class="c"># Same effect as   cat /dev/null &gt;data.xxx
 # However, this does not fork a new process, since &quot;:&quot; is a builtin.</span>
 </pre>
-<ul class="simple">
-<li>The &quot;?&quot; character serves as a single-character &quot;wild card&quot; for
+<ol class="arabic simple">
+<li>The <tt class="docutils literal">?</tt> character serves as a single#.character &quot;wild card&quot; for
 filename expansion in globbing, as well as representing one character in an
 extended regular expression.</li>
-</ul>
+<li><tt class="docutils literal">$</tt></li>
+</ol>
+<blockquote>
+<ol class="arabic simple">
+<li>: Variable substitution (contents of a variable).</li>
+<li>: end#.of#.line.</li>
+<li><tt class="docutils literal">${}</tt>        : Parameter substitution.</li>
+<li><tt class="docutils literal">$' ... '</tt>   : Quoted string expansion</li>
+<li><tt class="docutils literal">$*, $&#64;</tt>     : positional parameters.</li>
+<li><tt class="docutils literal">$?</tt>         : exit status variable.</li>
+<li><tt class="docutils literal">$$</tt>         : process ID variable.</li>
+</ol>
+</blockquote>
+<ol class="arabic simple">
+<li><tt class="docutils literal">()</tt>           : command group.</li>
+</ol>
+<pre class="code sh literal-block">
+<span class="o">(</span><span class="nv">a</span><span class="o">=</span>hello<span class="p">;</span> <span class="nb">echo</span> <span class="nv">$a</span><span class="o">)</span>
+
+
+A. Onemli not: parantez icine alinan ifade kendi icinde bir alt shell aciyor
+   ve komutlar bu shell icerisinde gecerli. lokal degiskenler alt shell<span class="err">'</span>in
+   disina tasinamaz.
+</pre>
+<ol class="arabic simple">
+<li>array initialization.</li>
+</ol>
+<pre class="code sh literal-block">
+<span class="nv">Array</span><span class="o">=(</span>element1 element2 element3<span class="o">)</span>
+</pre>
+<ol class="arabic">
+<li><p class="first"><tt class="docutils literal"><span class="pre">{xxx,yyy,zzz,...}</span></tt> Brace expansion</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">{a..z}</span></tt> Extended Brace expansion.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">{}</tt> Block of code [curly brackets].</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">[[]]</span></tt> test</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[]</tt></p>
+<ol class="upperalpha simple">
+<li>array element: In the context of an array, brackets set off the numbering
+of each element of that array.</li>
+</ol>
+<pre class="code sh literal-block">
+Array<span class="o">[</span>1<span class="o">]=</span>slot_1
+<span class="nb">echo</span> <span class="si">${</span><span class="nv">Array</span><span class="p">[1]</span><span class="si">}</span>
+</pre>
+<ol class="upperalpha simple" start="2">
+<li>range of characters (As part of a regular expression)</li>
+</ol>
+</li>
+<li><p class="first"><tt class="docutils literal">|</tt>: A pipe runs as a child process, and therefore cannot alter script
+variables.
+If one of the commands in the pipe aborts, this prematurely terminates
+execution of the pipe. Called a broken pipe, this condition sends a SIGPIPE
+signal.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">||</tt> OR logical operator: In a test construct, the <tt class="docutils literal">||</tt> operator causes a
+return of 0 (success) if either of the linked test conditions is true.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">&amp;&amp;</tt> AND logical operator. In a test construct, the <tt class="docutils literal">&amp;&amp;</tt> operator causes
+a return of 0 (success) only if both the linked test conditions are true.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">-</tt> redirection from/to stdin or stdout [dash].</p>
+</li>
+</ol>
+<pre class="code sh literal-block">
+bash<span class="nv">$ </span>cat -
+abc
+abc
+
+...
+
+Ctl-D
+</pre>
+<p><strong>Kendime not</strong> : stdout'tan stdin'e bir sey gondermek gerektiginde <tt class="docutils literal">- |</tt>
+ikilisini kullanabiliriz. boylece ciktilari bir dosyaya yazmaya gerek kalmaz.</p>
+<ol class="arabic simple">
+<li>Whitespace: functions as a separator between commands and/or variables.</li>
+<li><tt class="docutils literal">$</tt> Variable Substitution: Note that $variable is actually a simplified
+form of ${variable}.</li>
+<li>Degisken tanimlarken ifadede bosluk kullanacaksak tirnak icine alabilir,
+veya her bosluk icin escape karakteri kullanabiliriz.</li>
+</ol>
+<pre class="code sh literal-block">
+<span class="nv">degisken</span><span class="o">=</span><span class="se">\ </span>tanimlanacak<span class="se">\ </span>ifadenin<span class="se">\ </span>tumu
+<span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$degisken</span><span class="s2">&quot;</span>
+</pre>
+<ol class="arabic simple">
+<li>komut ciktisinda bos satir birakmak icin echo kulllaniliyor.</li>
+<li>Bir komut ciktisini degiskene atama yapacaksak, daha modern yol olarak $(..)
+syntax'ini kullanmakta fayda var, bundan once backquotes kullaniliyormus.</li>
+</ol>
+<pre class="code sh literal-block">
+<span class="c"># From /etc/rc.d/rc.local
+</span><span class="nv">R</span><span class="o">=</span><span class="k">$(</span>cat /etc/redhat-release<span class="k">)</span>
+<span class="nv">arch</span><span class="o">=</span><span class="k">$(</span>uname -m<span class="k">)</span>
+</pre>
 </div>
 </div>
 
