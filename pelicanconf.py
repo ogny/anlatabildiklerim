@@ -31,7 +31,8 @@ DEFAULT_PAGINATION = 100
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME = "/home/orkung/Git_Repolari/diger/pelican-themes/Just-Read"
+THEME = "/home/orkung/Git_Repolari/diger/pelican-themes/built-texts"
+#THEME = "/home/orkung/Git_Repolari/diger/pelican-themes/mnmlist"
 #PLUGIN_PATHS = ['/home/orkung/pelican-plugin']
 #PLUGINS = ['gravatar', 'tipue_search']
 
