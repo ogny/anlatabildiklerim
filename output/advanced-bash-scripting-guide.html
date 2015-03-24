@@ -84,6 +84,7 @@ in the current directory with a ./scriptname</li>
 </div>
 <div class="section" id="lazim-olabilecek-kod-parcalari">
 <h3>Lazim olabilecek Kod parcalari</h3>
+<<<<<<< HEAD
 <ol class="arabic">
 <li><p class="first">The following script prolog tests whether the script has been invoked with
 the correct number of parameters:</p>
@@ -98,6 +99,23 @@ then
   # `basename $0` is the script's filename.
   exit $E_WRONG_ARGS
 fi
+=======
+<ol class="arabic simple">
+<li>The following script prolog tests whether the script has been invoked with
+the correct number of parameters.</li>
+</ol>
+<pre class="code sh literal-block">
+<span class="nv">E_WRONG_ARGS</span><span class="o">=</span>85
+<span class="nv">script_parameters</span><span class="o">=</span><span class="s2">&quot;#.a #.h #.m #.z&quot;</span>
+<span class="c">#                  #.a = all, #.h = help, etc.
+</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span><span class="c">#.ne $Number_of_expected_args ]
+</span><span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;Usage: `basename </span><span class="nv">$0</span><span class="s2">` </span><span class="nv">$script_parameters</span><span class="s2">&quot;</span>
+  <span class="c"># `basename $0` is the script's filename.
+</span>  <span class="nb">exit</span> <span class="nv">$E_WRONG_ARGS</span>
+<span class="k">fi</span>
+>>>>>>> a8f98536089436c320cff75b112c27871494d170
 </pre>
 </li>
 </ol>

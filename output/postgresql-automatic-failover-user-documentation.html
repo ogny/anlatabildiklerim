@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>PostgreSQL Automatic Failover - User Documentation - Anlatabildiklerim</title>	
+	<meta name="author" content="Orkun Gunay">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+	
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700,400|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://gunluk.orkungunay.com/theme/css/main.css" type="text/css" />
+		
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	
+	<link href="http://gunluk.orkungunay.com/" type="application/atom+xml" rel="alternate" title="Anlatabildiklerim ATOM Feed" />
+</head>
+	
+<body>		
+	<header class="clearfix" role="banner">
+		<div class="wrapper">
+			<h1 class="huge"><a href="http://gunluk.orkungunay.com">Anlatabildiklerim</a></h1>
+		</div>
+	</header>
+	
+<div role="main" class="content clearfix">	
+	<article>
+		<div class="post wrapper">
+			<h1>PostgreSQL Automatic Failover - User Documentation</h1>
+			<div class="section" id="automatic-failover">
+<h2>Automatic Failover</h2>
+<p>repmgr allows for automatic failover when it detects the failure of the master node.
+Following is a quick setup for this.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation</h2>
+<p>For convenience, we define:</p>
+<dl class="docutils">
+<dt><strong>node1</strong></dt>
+<dd>is the fully qualified domain name of the Master server, IP 192.168.1.10</dd>
+<dt><strong>node2</strong></dt>
+<dd>is the fully qualified domain name of the Standby server, IP 192.168.1.11</dd>
+<dt><strong>witness</strong></dt>
+<dd>is the fully qualified domain name of the server used as a witness, IP 192.168.1.12</dd>
+</dl>
+<p><strong>Note:</strong> We don't recommend using names with the status of a server like «masterserver»,
+because it would be confusing once a failover takes place and the Master is
+now on the «standbyserver».</p>
+<div class="section" id="summary">
+<h3>Summary</h3>
+<p>2 PostgreSQL servers are involved in the replication.  Automatic failover needs
+a vote to decide what server it should promote, so an odd number is required.
+A witness-repmgrd is installed in a third server where it uses a PostgreSQL
+cluster to communicate with other repmgrd daemons.</p>
+<ol class="arabic simple">
+<li>Install PostgreSQL in all the servers involved (including the witness server)</li>
+<li>Install repmgr in all the servers involved (including the witness server)</li>
+<li>Configure the Master PostreSQL</li>
+<li>Clone the Master to the Standby using &quot;repmgr standby clone&quot; command</li>
+<li>Configure repmgr in all the servers involved (including the witness server)</li>
+<li>Register Master and Standby nodes</li>
+<li>Initiate witness server</li>
+<li>Start the repmgrd daemons in all nodes</li>
+</ol>
+<p><strong>Note</strong> A complete High-Availability design needs at least 3 servers to still have
+a backup node after a first failure.</p>
+</div>
+<div class="section" id="install-postgresql">
+<h3>Install PostgreSQL</h3>
+<p>You can install PostgreSQL using any of the recommended methods. You should ensure
+it's 9.0 or later.</p>
+</div>
+<div class="section" id="install-repmgr">
+<h3>Install repmgr</h3>
+<p>Install repmgr following the steps in the README file.</p>
+</div>
+<div class="section" id="configure-postresql">
+<h3>Configure PostreSQL</h3>
+<p>Log in to node1.</p>
+<p>Edit the file postgresql.conf and modify the parameters:</p>
+<pre class="literal-block">
+listen_addresses='*'
+wal_level = 'hot_standby'
+archive_mode = on
+archive_command = 'cd .'   # we can also use exit 0, anything that
+                           # just does nothing
+max_wal_senders = 10
+wal_keep_segments = 5000   # 80 GB required on pg_xlog
+hot_standby = on
+shared_preload_libraries = 'repmgr_funcs'
+</pre>
+<p>Edit the file pg_hba.conf and add lines for the replication:</p>
+<pre class="literal-block">
+host     repmgr           repmgr      127.0.0.1/32            trust
+host     repmgr           repmgr      192.168.1.10/30         trust
+host     replication      all         192.168.1.10/30         trust
+</pre>
+<p><strong>Note:</strong> It is also possible to use a password authentication (md5), .pgpass file
+should be edited to allow connection between each node.</p>
+<p>Create the user and database to manage replication:</p>
+<pre class="literal-block">
+su - postgres
+createuser -s repmgr
+createdb -O repmgr repmgr
+psql -f /usr/share/postgresql/9.0/contrib/repmgr_funcs.sql repmgr
+</pre>
+<p>Restart the PostgreSQL server:</p>
+<pre class="literal-block">
+pg_ctl -D $PGDATA restart
+</pre>
+<p>And check everything is fine in the server log.</p>
+<p>Create the ssh-key for the postgres user and copy it to other servers:</p>
+<pre class="literal-block">
+su - postgres
+ssh-keygen             # /!\ do not use a passphrase /!\
+cat ~/.ssh/id_rsa.pub &gt; ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+exit
+rsync -avz ~postgres/.ssh/authorized_keys node2:~postgres/.ssh/
+rsync -avz ~postgres/.ssh/authorized_keys witness:~postgres/.ssh/
+rsync -avz ~postgres/.ssh/id_rsa* node2:~postgres/.ssh/
+rsync -avz ~postgres/.ssh/id_rsa* witness:~postgres/.ssh/
+</pre>
+</div>
+<div class="section" id="clone-master">
+<h3>Clone Master</h3>
+<p>Log in to node2.</p>
+<p>Clone node1 (the current Master):</p>
+<pre class="literal-block">
+su - postgres
+repmgr -d repmgr -U repmgr -h node1 standby clone
+</pre>
+<p>Start the PostgreSQL server:</p>
+<pre class="literal-block">
+pg_ctl -D $PGDATA start
+</pre>
+<p>And check everything is fine in the server log.</p>
+</div>
+<div class="section" id="configure-repmgr">
+<h3>Configure repmgr</h3>
+<p>Log in to each server and configure repmgr by editing the file
+/etc/repmgr/repmgr.conf:</p>
+<pre class="literal-block">
+cluster=my_cluster
+node=1
+node_name=earth
+conninfo='host=192.168.1.10 dbname=repmgr user=repmgr'
+master_response_timeout=60
+reconnect_attempts=6
+reconnect_interval=10
+failover=automatic
+promote_command='promote_command.sh'
+follow_command='repmgr standby follow -f /etc/repmgr/repmgr.conf'
+</pre>
+<dl class="docutils">
+<dt><strong>cluster</strong></dt>
+<dd>is the name of the current replication.</dd>
+<dt><strong>node</strong></dt>
+<dd>is the number of the current node (1, 2 or 3 in the current example).</dd>
+<dt><strong>node_name</strong></dt>
+<dd>is an identifier for every node.</dd>
+<dt><strong>conninfo</strong></dt>
+<dd>is used to connect to the local PostgreSQL server (where the configuration file is) from any node. In the witness server configuration you need to add a 'port=5499' to the conninfo.</dd>
+<dt><strong>master_response_timeout</strong></dt>
+<dd>is the maximum amount of time we are going to wait before deciding the master has died and start the failover procedure.</dd>
+<dt><strong>reconnect_attempts</strong></dt>
+<dd>is the number of times we will try to reconnect to master after a failure has been detected and before start the failover procedure.</dd>
+<dt><strong>reconnect_interval</strong></dt>
+<dd>is the amount of time between retries to reconnect to master after a failure has been detected and before start the failover procedure.</dd>
+<dt><strong>failover</strong></dt>
+<dd>configure behavior: <em>manual</em> or <em>automatic</em>.</dd>
+<dt><strong>promote_command</strong></dt>
+<dd>the command executed to do the failover (including the PostgreSQL failover itself). The command must return 0 on success.</dd>
+<dt><strong>follow_command</strong></dt>
+<dd>the command executed to address the current standby to another Master. The command must return 0 on success.</dd>
+</dl>
+</div>
+<div class="section" id="register-master-and-standby">
+<h3>Register Master and Standby</h3>
+<p>Log in to node1.</p>
+<p>Register the node as Master:</p>
+<pre class="literal-block">
+su - postgres
+repmgr -f /etc/repmgr/repmgr.conf master register
+</pre>
+<p>Log in to node2. Register it as a standby:</p>
+<pre class="literal-block">
+su - postgres
+repmgr -f /etc/repmgr/repmgr.conf standby register
+</pre>
+</div>
+<div class="section" id="initialize-witness-server">
+<h3>Initialize witness server</h3>
+<p>Log in to witness.</p>
+<p>Initialize the witness server:</p>
+<pre class="literal-block">
+su - postgres
+repmgr -d repmgr -U repmgr -h 192.168.1.10 -D $WITNESS_PGDATA -f /etc/repmgr/repmgr.conf witness create
+</pre>
+<p>The witness server needs the following information from the command
+line:</p>
+<ul class="simple">
+<li>Connection details for the current master, to copy the cluster
+configuration.</li>
+<li>A location for initializing its own $PGDATA.</li>
+</ul>
+<p>It will also ask for the superuser password on the witness database so
+it can reconnect when needed.</p>
+</div>
+<div class="section" id="start-the-repmgrd-daemons">
+<h3>Start the repmgrd daemons</h3>
+<p>Log in to node2 and witness:</p>
+<pre class="literal-block">
+su - postgres
+repmgrd -f /etc/repmgr/repmgr.conf --daemonize -&gt; /var/log/postgresql/repmgr.log 2&gt;&amp;1
+</pre>
+<p><strong>Note:</strong> The Master does not need a repmgrd daemon.</p>
+</div>
+</div>
+<div class="section" id="suspend-automatic-behavior">
+<h2>Suspend Automatic behavior</h2>
+<p>Edit the repmgr.conf of the node to remove from automatic processing and change:</p>
+<pre class="literal-block">
+failover=manual
+</pre>
+<p>Then, signal repmgrd daemon:</p>
+<pre class="literal-block">
+su - postgres
+kill -HUP $(pidof repmgrd)
+</pre>
+</div>
+<div class="section" id="usage">
+<h2>Usage</h2>
+<p>The repmgr documentation is in the README file (how to build, options, etc.)</p>
+</div>
+
+			
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						
+			
+		</div>
+	
+<div class="meta wrapper">
+	<time datetime="2015-03-25T00:00:00+02:00" pubdate>Wed 25 March 2015</time>
+	<ul class="tag clearfix">
+		<li><a href="http://gunluk.orkungunay.com/category/misc.html">misc</a></li>
+		<li><a href="http://gunluk.orkungunay.com/tag/apps.html">apps</a></li>
+	</ul>
+</div>	</article>	
+</div>
+	
+		
+<footer class="clearfix">
+	<div class="wrapper pages">
+		<ul class="nav">
+			<li><a href="http://gunluk.orkungunay.com/archives.html">Archive</a></li>
+		</ul>
+	</div>
+	
+	<div class="copy wrapper">
+		<ul class="social">
+		</ul>
+	
+		<p role="contentinfo">© 2012 Orkun Gunay<br>
+		Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">Pelican</a>.</p>
+	</div>
+</footer>
+	
+	<script>
+	  var _gaq=[['_setAccount',''],['_trackPageview']];
+	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+</html>
