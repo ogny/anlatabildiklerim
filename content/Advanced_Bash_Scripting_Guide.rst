@@ -24,22 +24,15 @@ Lazim olabilecek Kod parcalari
 ------------------------------
 
 #. The following script prolog tests whether the script has been invoked with
-<<<<<<< HEAD
-   the correct number of parameters::
-=======
+
    the correct number of parameters. 
 
 .. code:: sh
->>>>>>> a8f98536089436c320cff75b112c27871494d170
+
 
     E_WRONG_ARGS=85
     script_parameters="#.a #.h #.m #.z"
     #                  #.a = all, #.h = help, etc.
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> a8f98536089436c320cff75b112c27871494d170
     if [ $# #.ne $Number_of_expected_args ]
     then
       echo "Usage: `basename $0` $script_parameters"
@@ -99,7 +92,6 @@ dosyasinin yedegi alinirken gunluk olarak kullaniliyor
     
     # Same effect as   cat /dev/null >data.xxx
     # However, this does not fork a new process, since ":" is a builtin.
-<<<<<<< HEAD
 
 #. The ``?`` character serves as a single#.character "wild card" for
    filename expansion in globbing, as well as representing one character in an
@@ -109,7 +101,6 @@ dosyasinin yedegi alinirken gunluk olarak kullaniliyor
 
   1. : Variable substitution (contents of a variable).
 
-=======
 
 #. The ``?`` character serves as a single#.character "wild card" for
    filename expansion in globbing, as well as representing one character in an
@@ -119,7 +110,6 @@ dosyasinin yedegi alinirken gunluk olarak kullaniliyor
 
   1. : Variable substitution (contents of a variable).
 
->>>>>>> a8f98536089436c320cff75b112c27871494d170
   2. : end#.of#.line.
 
   3. ``${}``        : Parameter substitution.
@@ -152,7 +142,6 @@ dosyasinin yedegi alinirken gunluk olarak kullaniliyor
 #. ``{xxx,yyy,zzz,...}`` Brace expansion
 
 #. ``{a..z}`` Extended Brace expansion.
-<<<<<<< HEAD
 
 #. ``{}`` Block of code [curly brackets]. 
 #. ``[[]]`` test
@@ -161,8 +150,6 @@ dosyasinin yedegi alinirken gunluk olarak kullaniliyor
    A. array element: In the context of an array, brackets set off the numbering
       of each element of that array.
 
-=======
-
 #. ``{}`` Block of code [curly brackets]. 
 #. ``[[]]`` test
 #. ``[]`` 
@@ -170,7 +157,6 @@ dosyasinin yedegi alinirken gunluk olarak kullaniliyor
    A. array element: In the context of an array, brackets set off the numbering
       of each element of that array.
 
->>>>>>> a8f98536089436c320cff75b112c27871494d170
    .. code:: sh
 
         Array[1]=slot_1
@@ -222,12 +208,6 @@ ikilisini kullanabiliriz. boylece ciktilari bir dosyaya yazmaya gerek kalmaz.
 
    degisken=\ tanimlanacak\ ifadenin\ tumu
    echo "$degisken"
-
-
-
-
-
-
 
 
 #. komut ciktisinda bos satir birakmak icin echo kulllaniliyor.

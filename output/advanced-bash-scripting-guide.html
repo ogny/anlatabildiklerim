@@ -84,41 +84,22 @@ in the current directory with a ./scriptname</li>
 </div>
 <div class="section" id="lazim-olabilecek-kod-parcalari">
 <h3>Lazim olabilecek Kod parcalari</h3>
-<<<<<<< HEAD
 <ol class="arabic">
-<li><p class="first">The following script prolog tests whether the script has been invoked with
-the correct number of parameters:</p>
-<pre class="literal-block">
-E_WRONG_ARGS=85
-script_parameters=&quot;#.a #.h #.m #.z&quot;
-#                  #.a = all, #.h = help, etc.
-
-if [ $# #.ne $Number_of_expected_args ]
-then
-  echo &quot;Usage: `basename $0` $script_parameters&quot;
-  # `basename $0` is the script's filename.
-  exit $E_WRONG_ARGS
-fi
-=======
-<ol class="arabic simple">
-<li>The following script prolog tests whether the script has been invoked with
-the correct number of parameters.</li>
+<li><p class="first">The following script prolog tests whether the script has been invoked with</p>
+<p>the correct number of parameters.</p>
+</li>
 </ol>
 <pre class="code sh literal-block">
 <span class="nv">E_WRONG_ARGS</span><span class="o">=</span>85
 <span class="nv">script_parameters</span><span class="o">=</span><span class="s2">&quot;#.a #.h #.m #.z&quot;</span>
 <span class="c">#                  #.a = all, #.h = help, etc.
-</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span><span class="c">#.ne $Number_of_expected_args ]
+</span><span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span><span class="c">#.ne $Number_of_expected_args ]
 </span><span class="k">then</span>
   <span class="nb">echo</span> <span class="s2">&quot;Usage: `basename </span><span class="nv">$0</span><span class="s2">` </span><span class="nv">$script_parameters</span><span class="s2">&quot;</span>
   <span class="c"># `basename $0` is the script's filename.
 </span>  <span class="nb">exit</span> <span class="nv">$E_WRONG_ARGS</span>
 <span class="k">fi</span>
->>>>>>> a8f98536089436c320cff75b112c27871494d170
 </pre>
-</li>
-</ol>
 </div>
 <div class="section" id="special-characters">
 <h3>Special Characters</h3>
@@ -175,6 +156,17 @@ extended regular expression.</li>
 <blockquote>
 <ol class="arabic simple">
 <li>: Variable substitution (contents of a variable).</li>
+</ol>
+</blockquote>
+<ol class="arabic simple">
+<li>The <tt class="docutils literal">?</tt> character serves as a single#.character &quot;wild card&quot; for
+filename expansion in globbing, as well as representing one character in an
+extended regular expression.</li>
+<li><tt class="docutils literal">$</tt></li>
+</ol>
+<blockquote>
+<ol class="arabic simple">
+<li>: Variable substitution (contents of a variable).</li>
 <li>: end#.of#.line.</li>
 <li><tt class="docutils literal">${}</tt>        : Parameter substitution.</li>
 <li><tt class="docutils literal">$' ... '</tt>   : Quoted string expansion</li>
@@ -204,6 +196,16 @@ A. Onemli not: parantez icine alinan ifade kendi icinde bir alt shell aciyor
 <li><p class="first"><tt class="docutils literal"><span class="pre">{xxx,yyy,zzz,...}</span></tt> Brace expansion</p>
 </li>
 <li><p class="first"><tt class="docutils literal"><span class="pre">{a..z}</span></tt> Extended Brace expansion.</p>
+</li>
+<li><p class="first"><tt class="docutils literal">{}</tt> Block of code [curly brackets].</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">[[]]</span></tt> test</p>
+</li>
+<li><p class="first"><tt class="docutils literal">[]</tt></p>
+<ol class="upperalpha simple">
+<li>array element: In the context of an array, brackets set off the numbering
+of each element of that array.</li>
+</ol>
 </li>
 <li><p class="first"><tt class="docutils literal">{}</tt> Block of code [curly brackets].</p>
 </li>
@@ -278,6 +280,17 @@ syntax'ini kullanmakta fayda var, bundan once backquotes kullaniliyormus.</li>
     <div class="span10">
       <h3>Comments</h3>
     
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'anlatabildiklerim'; 
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>  
     </div>
         </div>

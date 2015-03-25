@@ -1,215 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anlatabildiklerim</title><link>http://gunluk.orkungunay.com/</link><description></description><atom:link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 27 Jan 2015 00:00:00 +0200</lastBuildDate><item><title>Avrupa ve Biz Ilber Ortaylı</title><link>http://gunluk.orkungunay.com/avrupa-ve-biz-ilber-ortayli.html</link><description>&lt;ol class="arabic simple"&gt;
-=======
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anlatabildiklerim</title><link>http://gunluk.orkungunay.com/</link><description></description><atom:link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 25 Mar 2015 00:00:00 +0200</lastBuildDate><item><title>PostgreSQL Automatic Failover - User Documentation</title><link>http://gunluk.orkungunay.com/postgresql-automatic-failover-user-documentation.html</link><description>&lt;div class="section" id="automatic-failover"&gt;
-&lt;h2&gt;Automatic Failover&lt;/h2&gt;
-&lt;p&gt;repmgr allows for automatic failover when it detects the failure of the master node.
-Following is a quick setup for this.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="installation"&gt;
-&lt;h2&gt;Installation&lt;/h2&gt;
-&lt;p&gt;For convenience, we define:&lt;/p&gt;
-&lt;dl class="docutils"&gt;
-&lt;dt&gt;&lt;strong&gt;node1&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the fully qualified domain name of the Master server, IP 192.168.1.10&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;node2&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the fully qualified domain name of the Standby server, IP 192.168.1.11&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;witness&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the fully qualified domain name of the server used as a witness, IP 192.168.1.12&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; We don't recommend using names with the status of a server like «masterserver»,
-because it would be confusing once a failover takes place and the Master is
-now on the «standbyserver».&lt;/p&gt;
-&lt;div class="section" id="summary"&gt;
-&lt;h3&gt;Summary&lt;/h3&gt;
-&lt;p&gt;2 PostgreSQL servers are involved in the replication.  Automatic failover needs
-a vote to decide what server it should promote, so an odd number is required.
-A witness-repmgrd is installed in a third server where it uses a PostgreSQL
-cluster to communicate with other repmgrd daemons.&lt;/p&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;Install PostgreSQL in all the servers involved (including the witness server)&lt;/li&gt;
-&lt;li&gt;Install repmgr in all the servers involved (including the witness server)&lt;/li&gt;
-&lt;li&gt;Configure the Master PostreSQL&lt;/li&gt;
-&lt;li&gt;Clone the Master to the Standby using &amp;quot;repmgr standby clone&amp;quot; command&lt;/li&gt;
-&lt;li&gt;Configure repmgr in all the servers involved (including the witness server)&lt;/li&gt;
-&lt;li&gt;Register Master and Standby nodes&lt;/li&gt;
-&lt;li&gt;Initiate witness server&lt;/li&gt;
-&lt;li&gt;Start the repmgrd daemons in all nodes&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; A complete High-Availability design needs at least 3 servers to still have
-a backup node after a first failure.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="install-postgresql"&gt;
-&lt;h3&gt;Install PostgreSQL&lt;/h3&gt;
-&lt;p&gt;You can install PostgreSQL using any of the recommended methods. You should ensure
-it's 9.0 or later.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="install-repmgr"&gt;
-&lt;h3&gt;Install repmgr&lt;/h3&gt;
-&lt;p&gt;Install repmgr following the steps in the README file.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="configure-postresql"&gt;
-&lt;h3&gt;Configure PostreSQL&lt;/h3&gt;
-&lt;p&gt;Log in to node1.&lt;/p&gt;
-&lt;p&gt;Edit the file postgresql.conf and modify the parameters:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-listen_addresses='*'
-wal_level = 'hot_standby'
-archive_mode = on
-archive_command = 'cd .'   # we can also use exit 0, anything that
-                           # just does nothing
-max_wal_senders = 10
-wal_keep_segments = 5000   # 80 GB required on pg_xlog
-hot_standby = on
-shared_preload_libraries = 'repmgr_funcs'
-&lt;/pre&gt;
-&lt;p&gt;Edit the file pg_hba.conf and add lines for the replication:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-host     repmgr           repmgr      127.0.0.1/32            trust
-host     repmgr           repmgr      192.168.1.10/30         trust
-host     replication      all         192.168.1.10/30         trust
-&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; It is also possible to use a password authentication (md5), .pgpass file
-should be edited to allow connection between each node.&lt;/p&gt;
-&lt;p&gt;Create the user and database to manage replication:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-createuser -s repmgr
-createdb -O repmgr repmgr
-psql -f /usr/share/postgresql/9.0/contrib/repmgr_funcs.sql repmgr
-&lt;/pre&gt;
-&lt;p&gt;Restart the PostgreSQL server:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pg_ctl -D $PGDATA restart
-&lt;/pre&gt;
-&lt;p&gt;And check everything is fine in the server log.&lt;/p&gt;
-&lt;p&gt;Create the ssh-key for the postgres user and copy it to other servers:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-ssh-keygen             # /!\ do not use a passphrase /!\
-cat ~/.ssh/id_rsa.pub &amp;gt; ~/.ssh/authorized_keys
-chmod 600 ~/.ssh/authorized_keys
-exit
-rsync -avz ~postgres/.ssh/authorized_keys node2:~postgres/.ssh/
-rsync -avz ~postgres/.ssh/authorized_keys witness:~postgres/.ssh/
-rsync -avz ~postgres/.ssh/id_rsa* node2:~postgres/.ssh/
-rsync -avz ~postgres/.ssh/id_rsa* witness:~postgres/.ssh/
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="clone-master"&gt;
-&lt;h3&gt;Clone Master&lt;/h3&gt;
-&lt;p&gt;Log in to node2.&lt;/p&gt;
-&lt;p&gt;Clone node1 (the current Master):&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-repmgr -d repmgr -U repmgr -h node1 standby clone
-&lt;/pre&gt;
-&lt;p&gt;Start the PostgreSQL server:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pg_ctl -D $PGDATA start
-&lt;/pre&gt;
-&lt;p&gt;And check everything is fine in the server log.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="configure-repmgr"&gt;
-&lt;h3&gt;Configure repmgr&lt;/h3&gt;
-&lt;p&gt;Log in to each server and configure repmgr by editing the file
-/etc/repmgr/repmgr.conf:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-cluster=my_cluster
-node=1
-node_name=earth
-conninfo='host=192.168.1.10 dbname=repmgr user=repmgr'
-master_response_timeout=60
-reconnect_attempts=6
-reconnect_interval=10
-failover=automatic
-promote_command='promote_command.sh'
-follow_command='repmgr standby follow -f /etc/repmgr/repmgr.conf'
-&lt;/pre&gt;
-&lt;dl class="docutils"&gt;
-&lt;dt&gt;&lt;strong&gt;cluster&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the name of the current replication.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;node&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the number of the current node (1, 2 or 3 in the current example).&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;node_name&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is an identifier for every node.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;conninfo&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is used to connect to the local PostgreSQL server (where the configuration file is) from any node. In the witness server configuration you need to add a 'port=5499' to the conninfo.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;master_response_timeout&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the maximum amount of time we are going to wait before deciding the master has died and start the failover procedure.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;reconnect_attempts&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the number of times we will try to reconnect to master after a failure has been detected and before start the failover procedure.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;reconnect_interval&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;is the amount of time between retries to reconnect to master after a failure has been detected and before start the failover procedure.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;failover&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;configure behavior: &lt;em&gt;manual&lt;/em&gt; or &lt;em&gt;automatic&lt;/em&gt;.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;promote_command&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;the command executed to do the failover (including the PostgreSQL failover itself). The command must return 0 on success.&lt;/dd&gt;
-&lt;dt&gt;&lt;strong&gt;follow_command&lt;/strong&gt;&lt;/dt&gt;
-&lt;dd&gt;the command executed to address the current standby to another Master. The command must return 0 on success.&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;div class="section" id="register-master-and-standby"&gt;
-&lt;h3&gt;Register Master and Standby&lt;/h3&gt;
-&lt;p&gt;Log in to node1.&lt;/p&gt;
-&lt;p&gt;Register the node as Master:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-repmgr -f /etc/repmgr/repmgr.conf master register
-&lt;/pre&gt;
-&lt;p&gt;Log in to node2. Register it as a standby:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-repmgr -f /etc/repmgr/repmgr.conf standby register
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="initialize-witness-server"&gt;
-&lt;h3&gt;Initialize witness server&lt;/h3&gt;
-&lt;p&gt;Log in to witness.&lt;/p&gt;
-&lt;p&gt;Initialize the witness server:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-repmgr -d repmgr -U repmgr -h 192.168.1.10 -D $WITNESS_PGDATA -f /etc/repmgr/repmgr.conf witness create
-&lt;/pre&gt;
-&lt;p&gt;The witness server needs the following information from the command
-line:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Connection details for the current master, to copy the cluster
-configuration.&lt;/li&gt;
-&lt;li&gt;A location for initializing its own $PGDATA.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It will also ask for the superuser password on the witness database so
-it can reconnect when needed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="start-the-repmgrd-daemons"&gt;
-&lt;h3&gt;Start the repmgrd daemons&lt;/h3&gt;
-&lt;p&gt;Log in to node2 and witness:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-repmgrd -f /etc/repmgr/repmgr.conf --daemonize -&amp;gt; /var/log/postgresql/repmgr.log 2&amp;gt;&amp;amp;1
-&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The Master does not need a repmgrd daemon.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="suspend-automatic-behavior"&gt;
-&lt;h2&gt;Suspend Automatic behavior&lt;/h2&gt;
-&lt;p&gt;Edit the repmgr.conf of the node to remove from automatic processing and change:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-failover=manual
-&lt;/pre&gt;
-&lt;p&gt;Then, signal repmgrd daemon:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-su - postgres
-kill -HUP $(pidof repmgrd)
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="usage"&gt;
-&lt;h2&gt;Usage&lt;/h2&gt;
-&lt;p&gt;The repmgr documentation is in the README file (how to build, options, etc.)&lt;/p&gt;
-&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Orkun Gunay</dc:creator><pubDate>Wed, 25 Mar 2015 00:00:00 +0200</pubDate><guid>tag:gunluk.orkungunay.com,2015-03-25:postgresql-automatic-failover-user-documentation.html</guid><category>apps</category></item><item><title>Avrupa ve Biz Ilber Ortaylı</title><link>http://gunluk.orkungunay.com/avrupa-ve-biz-ilber-ortayli.html</link><description>&lt;ol class="arabic simple"&gt;
->>>>>>> a8f98536089436c320cff75b112c27871494d170
 &lt;li&gt;s:17&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Batılılaşma her şeyden önce şiddetli olan bir eylemdir. Hiçbir toplum,
@@ -414,41 +204,22 @@ in the current directory with a ./scriptname&lt;/li&gt;
 &lt;/div&gt;
 &lt;div class="section" id="lazim-olabilecek-kod-parcalari"&gt;
 &lt;h3&gt;Lazim olabilecek Kod parcalari&lt;/h3&gt;
-<<<<<<< HEAD
 &lt;ol class="arabic"&gt;
-&lt;li&gt;&lt;p class="first"&gt;The following script prolog tests whether the script has been invoked with
-the correct number of parameters:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-E_WRONG_ARGS=85
-script_parameters=&amp;quot;#.a #.h #.m #.z&amp;quot;
-#                  #.a = all, #.h = help, etc.
-
-if [ $# #.ne $Number_of_expected_args ]
-then
-  echo &amp;quot;Usage: `basename $0` $script_parameters&amp;quot;
-  # `basename $0` is the script's filename.
-  exit $E_WRONG_ARGS
-fi
-=======
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;The following script prolog tests whether the script has been invoked with
-the correct number of parameters.&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The following script prolog tests whether the script has been invoked with&lt;/p&gt;
+&lt;p&gt;the correct number of parameters.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class="code sh literal-block"&gt;
 &lt;span class="nv"&gt;E_WRONG_ARGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;85
 &lt;span class="nv"&gt;script_parameters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#.a #.h #.m #.z&amp;quot;&lt;/span&gt;
 &lt;span class="c"&gt;#                  #.a = all, #.h = help, etc.
-&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$# &lt;/span&gt;&lt;span class="c"&gt;#.ne $Number_of_expected_args ]
+&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$# &lt;/span&gt;&lt;span class="c"&gt;#.ne $Number_of_expected_args ]
 &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
   &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usage: `basename &lt;/span&gt;&lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="s2"&gt;` &lt;/span&gt;&lt;span class="nv"&gt;$script_parameters&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
   &lt;span class="c"&gt;# `basename $0` is the script's filename.
 &lt;/span&gt;  &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="nv"&gt;$E_WRONG_ARGS&lt;/span&gt;
 &lt;span class="k"&gt;fi&lt;/span&gt;
->>>>>>> a8f98536089436c320cff75b112c27871494d170
 &lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="special-characters"&gt;
 &lt;h3&gt;Special Characters&lt;/h3&gt;
@@ -505,6 +276,17 @@ extended regular expression.&lt;/li&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;: Variable substitution (contents of a variable).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;?&lt;/tt&gt; character serves as a single#.character &amp;quot;wild card&amp;quot; for
+filename expansion in globbing, as well as representing one character in an
+extended regular expression.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;$&lt;/tt&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;: Variable substitution (contents of a variable).&lt;/li&gt;
 &lt;li&gt;: end#.of#.line.&lt;/li&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;${}&lt;/tt&gt;        : Parameter substitution.&lt;/li&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;$' ... '&lt;/tt&gt;   : Quoted string expansion&lt;/li&gt;
@@ -534,6 +316,16 @@ A. Onemli not: parantez icine alinan ifade kendi icinde bir alt shell aciyor
 &lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;{xxx,yyy,zzz,...}&lt;/span&gt;&lt;/tt&gt; Brace expansion&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;{a..z}&lt;/span&gt;&lt;/tt&gt; Extended Brace expansion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;{}&lt;/tt&gt; Block of code [curly brackets].&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;[[]]&lt;/span&gt;&lt;/tt&gt; test&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;[]&lt;/tt&gt;&lt;/p&gt;
+&lt;ol class="upperalpha simple"&gt;
+&lt;li&gt;array element: In the context of an array, brackets set off the numbering
+of each element of that array.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;{}&lt;/tt&gt; Block of code [curly brackets].&lt;/p&gt;
 &lt;/li&gt;
