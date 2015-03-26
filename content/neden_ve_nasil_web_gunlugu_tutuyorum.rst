@@ -28,6 +28,7 @@ Günlüğü tutmamı sağlayan araçların listesi:
 -  Metin editörü: **Vim**
 -  Versiyonlama: **Github**
 -  Deployment yöntemi: **Rsync**
+-  Yorum alani: **Disqus**
 
 Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
 Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu sebepten bu
