@@ -4,9 +4,6 @@ Neden ve Nasıl Web Günlüğü Tutuyorum - Anlatabildiklerim
 
 :date: 02.11.2014
 
-Neden ve Nasıl Web Günlüğü Tutuyorum
-------------------------------------
-
 **Neden**
 
 Önce net bir amaç tanımlamalı; *gideceği limanı bilmeyen gemiye hiç bir
@@ -26,7 +23,7 @@ Neden diğer araçlar değil de web günlüğü?
 Günlüğü tutmamı sağlayan araçların listesi:
 
 -  Platform: **Pelican** Static Site Generator
--  Tema: **Lazystrap**
+-  Tema: **built-texts**
 -  Biçimlendirme dili: **reStructuredText**
 -  Metin editörü: **Vim**
 -  Versiyonlama: **Github**
@@ -35,7 +32,3 @@ Günlüğü tutmamı sağlayan araçların listesi:
 Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
 Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu sebepten bu
 araçların nasıl kullanıldıklarına burada girmeyeceğim.
-
-Eksikler;
-
--  Yorum yazma alani eklenecek. (Disqus)
