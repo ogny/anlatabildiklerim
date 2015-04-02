@@ -3,7 +3,8 @@ Mysql Teorik Notlar
 
 :Date: 04/12/2014 
 :Author: Orkun Gunay
-:tags: mysql
+:tags: mysql,theory
+:category: sql
 
 
 **some of the important characteristics of MySQL**
