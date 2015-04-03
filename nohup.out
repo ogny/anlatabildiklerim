@@ -1,0 +1,7 @@
+ERROR: Could not process ./deneme.rst
+  | u'Pr\u015f 02 Nis 2015 18:56:21 EEST' is not a valid date
+WARNING: Caught Exception: [Errno 2] No such file or directory: 'pelicanconf.py'
+ERROR: Could not process ./deneme.rst
+  | u'Pr\u015f 02 Nis 2015 18:56:21 EEST' is not a valid date
+ERROR: Could not process ./deneme.rst
+  | u'Pr\u015f 02 Nis 2015 18:56:21 EEST' is not a valid date

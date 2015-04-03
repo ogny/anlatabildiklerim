@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2015-01-27T00:00:00+02:00</updated><entry><title>Avrupa ve Biz Ilber Ortaylı</title><link href="http://gunluk.orkungunay.com/avrupa-ve-biz-ilber-ortayli.html" rel="alternate"></link><updated>2015-01-27T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-27:avrupa-ve-biz-ilber-ortayli.html</id><summary type="html">&lt;ol class="arabic simple"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/" rel="alternate"></link><link href="http://gunluk.orkungunay.com/feeds/orkun-gunay.atom.xml" rel="self"></link><id>http://gunluk.orkungunay.com/</id><updated>2015-03-30T01:18:48+03:00</updated><entry><title>TT RSS Kullanimi</title><link href="http://gunluk.orkungunay.com/tt-rss-kullanimi.html" rel="alternate"></link><updated>2015-03-30T01:18:48+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-03-30:tt-rss-kullanimi.html</id><summary type="html">&lt;p&gt;Giris niteliginde, zaman icinde genisletilecektir.&lt;/p&gt;
+&lt;p&gt;On yuzu daha verimli kullanabilmek icin;
+&lt;cite&gt;f Shift+c&lt;/cite&gt; ile combine mode kapatilir.
+&lt;cite&gt;f c&lt;/cite&gt; ile auto expand kapatilir.
+su an icin mouse'u hic kullanmamak efektif degil, ilgilendigimiz makaleyi
+bulana kadar asagi &lt;cite&gt;shift n&lt;/cite&gt; ve geri donmek icin yukari &lt;cite&gt;shift p&lt;/cite&gt; ile
+gezinebiliriz.&lt;/p&gt;
+</summary><category term="ttrss"></category></entry><entry><title>test</title><link href="http://gunluk.orkungunay.com/test.html" rel="alternate"></link><updated>2015-03-04T10:13:54+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-03-04:test.html</id><summary type="html"></summary><category term=""></category></entry><entry><title>Avrupa ve Biz Ilber Ortaylı</title><link href="http://gunluk.orkungunay.com/avrupa-ve-biz-ilber-ortayli.html" rel="alternate"></link><updated>2015-01-27T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-27:avrupa-ve-biz-ilber-ortayli.html</id><summary type="html">&lt;ol class="arabic simple"&gt;
 &lt;li&gt;s:17&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Batılılaşma her şeyden önce şiddetli olan bir eylemdir. Hiçbir toplum,
@@ -85,7 +92,7 @@ yaşar bunu, korosuyla solosuyla. O cemiyette bir ölçü, denge ve hassasiyet
 vardır. Sofya'daki askeri ataşenin, geleceğin liderinin ifade ettiği keyfyet
 budur. Bir opera eserini icra eden cemiyet, birçok işi topluca yapabilme ve
 örgütlenme kabiliyetine sahip demektir.&lt;/p&gt;
-</summary></entry><entry><title>Sağlıklı Yaşamak</title><link href="http://gunluk.orkungunay.com/saglikli-yasamak.html" rel="alternate"></link><updated>2015-01-04T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-04:saglikli-yasamak.html</id><summary type="html">&lt;p&gt;Dr. Mosley'in BBC Knowledge'daki tv programlarini izleme firsati buldum.
+</summary></entry><entry><title>yeni yazi</title><link href="http://gunluk.orkungunay.com/yeni-yazi.html" rel="alternate"></link><updated>2015-01-04T10:08:40+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-04:yeni-yazi.html</id><summary type="html"></summary><category term="gereksiz"></category></entry><entry><title>Sağlıklı Yaşamak</title><link href="http://gunluk.orkungunay.com/saglikli-yasamak.html" rel="alternate"></link><updated>2015-01-04T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2015-01-04:saglikli-yasamak.html</id><summary type="html">&lt;p&gt;Dr. Mosley'in BBC Knowledge'daki tv programlarini izleme firsati buldum.
 Bolumlerle ilgili notlarimi paylasiyorum;&lt;/p&gt;
 &lt;ol class="upperalpha simple"&gt;
 &lt;li&gt;intermittent fasting (aralıklı oruç) &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[*]&lt;/a&gt;&lt;/li&gt;
@@ -515,9 +522,7 @@ VARCHAR ` field.&lt;/li&gt;
 &lt;li&gt;qps: queries per second&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;MySQL Stored Procedures&lt;/strong&gt;&lt;/p&gt;
-</summary><category term="mysql"></category></entry><entry><title>Neden ve Nasıl Web Günlüğü Tutuyorum - Anlatabildiklerim</title><link href="http://gunluk.orkungunay.com/neden-ve-nasil-web-gunlugu-tutuyorum-anlatabildiklerim.html" rel="alternate"></link><updated>2014-02-11T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2014-02-11:neden-ve-nasil-web-gunlugu-tutuyorum-anlatabildiklerim.html</id><summary type="html">&lt;div class="section" id="neden-ve-nasil-web-gunlugu-tutuyorum"&gt;
-&lt;h2&gt;Neden ve Nasıl Web Günlüğü Tutuyorum&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Neden&lt;/strong&gt;&lt;/p&gt;
+</summary><category term="mysql"></category><category term="theory"></category></entry><entry><title>Neden ve Nasıl Web Günlüğü Tutuyorum</title><link href="http://gunluk.orkungunay.com/neden-ve-nasil-web-gunlugu-tutuyorum.html" rel="alternate"></link><updated>2014-02-11T00:00:00+02:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2014-02-11:neden-ve-nasil-web-gunlugu-tutuyorum.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Neden&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Önce net bir amaç tanımlamalı; &lt;em&gt;gideceği limanı bilmeyen gemiye hiç bir
 rüzgaryardım etmez.&lt;/em&gt;·&lt;/p&gt;
 &lt;p&gt;Web günlüğü tutmak bir ihtiyaç mıdır?&lt;/p&gt;
@@ -532,20 +537,16 @@ arasında bir yerde yazmak istediğimde işime yarıyor.&lt;/li&gt;
 &lt;p&gt;Günlüğü tutmamı sağlayan araçların listesi:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Platform: &lt;strong&gt;Pelican&lt;/strong&gt; Static Site Generator&lt;/li&gt;
-&lt;li&gt;Tema: &lt;strong&gt;Lazystrap&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Tema: &lt;strong&gt;built-texts&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Biçimlendirme dili: &lt;strong&gt;reStructuredText&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Metin editörü: &lt;strong&gt;Vim&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Versiyonlama: &lt;strong&gt;Github&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Deployment yöntemi: &lt;strong&gt;Rsync&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Yorum alani: &lt;strong&gt;Disqus&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Tüm bu araçlar özgür yazılım olup web sitelerinden dağıtılmaktadırlar.
 Kurulum kullanım vb. belgeleri web sitelerinde mevcuttur. Bu sebepten bu
 araçların nasıl kullanıldıklarına burada girmeyeceğim.&lt;/p&gt;
-&lt;p&gt;Eksikler;&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Yorum yazma alani eklenecek. (Disqus)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 </summary></entry><entry><title>Kullandığım Terminal Uygulamaları</title><link href="http://gunluk.orkungunay.com/kullandigim-terminal-uygulamalari.html" rel="alternate"></link><updated>2013-10-21T00:41:00+03:00</updated><author><name>Orkun Gunay</name></author><id>tag:gunluk.orkungunay.com,2013-10-21:kullandigim-terminal-uygulamalari.html</id><summary type="html">&lt;p&gt;Kullanım alışkanlığını edinirseniz hayatınızı kolaylaştıran terminal
 uygulamalarını paylaşmak istedim. Liste eksik eklemeler yapacağım.&lt;/p&gt;
 &lt;ul class="simple"&gt;
